@@ -43,3 +43,10 @@ Steps 1 & 2 | Step 3
 - As a parent or teacher, I want themed animal sets, so that the game can be used for learning as well as fun.
 - As a player, I want the game to work well on a desktop and mobile screen, so that I can play in different environments.
 - As a player, I want to see a simple start screen and game over or completion screen, so that I know when the experience begins and ends.
+
+
+## Wireframe
+
+The initial UI wireframe is shown below and is the primary design reference during development.
+
+![Animal Match Wireframe](docs/wireframe.png)
