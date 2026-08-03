@@ -232,3 +232,121 @@ Land animal questions
 ]
 */
 
+/**
+ * Air animal questions
+ * [
+  {
+    "id": 1,
+    "question": "I am a super-fast hunter! I am the fastest bird in the whole world, diving through the sky like a rocket to catch my food. Who am I?",
+    "options": [
+      {"letter": "A", "text": "Albatross"},
+      {"letter": "B", "text": "Peregrine Falcon"},
+      {"letter": "C", "text": "Pigeon"},
+      {"letter": "D", "text": "Hummingbird"},
+      {"letter": "E", "text": "Raven"},
+      {"letter": "F", "text": "Woodpecker"}
+    ],
+    "correctAnswer": "B",
+    "animalName": "Peregrine Falcon"
+  },
+  {
+    "id": 2,
+    "question": "I am tiny, colorful, and I can flap my wings so fast they make a buzzing sound. I can even fly backwards and upside down! Who am I?",
+    "options": [
+      {"letter": "A", "text": "Bumblebee"},
+      {"letter": "B", "text": "Bat"},
+      {"letter": "C", "text": "Hummingbird"},
+      {"letter": "D", "text": "Kestrel"},
+      {"letter": "E", "text": "Swift"},
+      {"letter": "F", "text": "Stork"}
+    ],
+    "correctAnswer": "C",
+    "animalName": "Hummingbird"
+  },
+  {
+    "id": 3,
+    "question": "I am not a bird at all—I am a mammal! I have furry wings, I hang upside down to sleep, and I fly around at night. Who am I?",
+    "options": [
+      {"letter": "A", "text": "Bald Eagle"},
+      {"letter": "B", "text": "Bat"},
+      {"letter": "C", "text": "Bumblebee"},
+      {"letter": "D", "text": "Raven"},
+      {"letter": "E", "text": "Swift"},
+      {"letter": "F", "text": "Pigeon"}
+    ],
+    "correctAnswer": "B",
+    "animalName": "Bat"
+  },
+  {
+    "id": 4,
+    "question": "I use my strong, pointy beak like a jackhammer to tap-tap-tap on tree trunks to find tasty bugs hidden inside the wood. Who am I?",
+    "options": [
+      {"letter": "A", "text": "Woodpecker"},
+      {"letter": "B", "text": "Albatross"},
+      {"letter": "C", "text": "Peregrine Falcon"},
+      {"letter": "D", "text": "Kestrel"},
+      {"letter": "E", "text": "Stork"},
+      {"letter": "F", "text": "Bumblebee"}
+    ],
+    "correctAnswer": "A",
+    "animalName": "Woodpecker"
+  },
+  {
+    "id": 5,
+    "question": "I have a famous white head and a bright yellow beak. I am a large bird of prey that loves to scoop fish right out of the water! Who am I?",
+    "options": [
+      {"letter": "A", "text": "Pigeon"},
+      {"letter": "B", "text": "Raven"},
+      {"letter": "C", "text": "Bald Eagle"},
+      {"letter": "D", "text": "Swift"},
+      {"letter": "E", "text": "Albatross"},
+      {"letter": "F", "text": "Bat"}
+    ],
+    "correctAnswer": "C",
+    "animalName": "Bald Eagle"
+  },
+  {
+    "id": 6,
+    "question": "I am a fuzzy, black-and-yellow insect. I fly from flower to flower collecting sweet nectar and pollen to help plants grow. Who am I?",
+    "options": [
+      {"letter": "A", "text": "Hummingbird"},
+      {"letter": "B", "text": "Bumblebee"},
+      {"letter": "C", "text": "Bat"},
+      {"letter": "D", "text": "Woodpecker"},
+      {"letter": "E", "text": "Stork"},
+      {"letter": "F", "text": "Kestrel"}
+    ],
+    "correctAnswer": "B",
+    "animalName": "Bumblebee"
+  },
+  {
+    "id": 7,
+    "question": "I am a giant seabird with the biggest wingspan of any bird alive! I can glide over the ocean waves for hours without flapping my wings once. Who am I?",
+    "options": [
+      {"letter": "A", "text": "Swift"},
+      {"letter": "B", "text": "Peregrine Falcon"},
+      {"letter": "C", "text": "Albatross"},
+      {"letter": "D", "text": "Pigeon"},
+      {"letter": "E", "text": "Raven"},
+      {"letter": "F", "text": "Bald Eagle"}
+    ],
+    "correctAnswer": "C",
+    "animalName": "Albatross"
+  },
+  {
+    "id": 8,
+    "question": "I am a large, tall bird with very long legs and a big beak. I am famous for building massive stick nests on top of chimneys and poles! Who am I?",
+    "options": [
+      {"letter": "A", "text": "Kestrel"},
+      {"letter": "B", "text": "Stork"},
+      {"letter": "C", "text": "Woodpecker"},
+      {"letter": "D", "text": "Hummingbird"},
+      {"letter": "E", "text": "Bat"},
+      {"letter": "F", "text": "Bumblebee"}
+    ],
+    "correctAnswer": "B",
+    "animalName": "Stork"
+  }
+]
+
+ */
