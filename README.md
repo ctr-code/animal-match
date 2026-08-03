@@ -29,9 +29,7 @@ Steps 1 & 2 | Step 3
 
 ## User Stories
 
-I used AI to generate these.  This is different from the original vision because it is no longer a game of elimination; you just do the questions one at a time.  On the other hand, I think an elimination version would require an extra screen to show the correct answers otherwise it would be quite annoying.  This is simpler.
-
-- As a player, I want to choose from several animal sets such as jungle, farm, and wild British animals, so that I can play with different themes.
+- As a player, I want to choose from several animal sets such as Ocean, Sea and Air animals, so that I can play with different themes.
 - As a player, I want to see a list of available animal sets before starting, so that I can select one that interests me.
 - As a player, I want to view a description of an animal and a set of pictures of possible answers, so that I can identify the correct animal.
 - As a player, I want to select one animal from the picture choices, so that I can make my guess.
