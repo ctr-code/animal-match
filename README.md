@@ -20,7 +20,13 @@ A game of matching animal descriptions to pictures.
 
 8. After pushing a change create a pull request, which will prompt me to integrate the change into the main branch.
 
+Steps 1 & 2 | Step 3
+:--: | :--:
+![steps 1&2 of creating pull request](docs/pull-1-2.png) | ![step 3 of creating pull request](docs/pull-3.png)
+
+
 9. Use `git pull origin main` to retrieve other people's changes and merge them into your code.
+
 
 ## User Stories
 
