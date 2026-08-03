@@ -155,3 +155,9 @@ Steps 1 & 2 | Step 3
     - [ ] Design the start screen and end screen layouts.
     - [ ] Add transitions between the start, gameplay, and end states.
     - [ ] Provide a restart or play again action on the end screen.
+
+## Wireframe
+
+The initial UI wireframe is shown below and is the primary design reference during development.
+
+![Animal Match Wireframe](docs/wireframe.png)
