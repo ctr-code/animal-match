@@ -18,12 +18,11 @@ A game of matching animal descriptions to pictures.
 
 7. After you have made some changes and committed them use `git push -u origin your-name-here` to push them to your branch on github.  After you've done this once you can simply use `git push` for future updates.
 
-8. After pushing a change create a pull request, which will prompt me to integrate the change into the main branch.
+8. After pushing a change, go to github to create a pull request.  If you see a pull request banner (red arrow) click on the "Compare & pull request" button.  Otherwise, select your branch in the drop down (purple arrow), and click on the "commits ahead" text (green arrow).  You should see something like the second screenshot.  Click on the "Create pull request" button.
 
 Steps 1 & 2 | Step 3
 :--: | :--:
 ![steps 1&2 of creating pull request](docs/pull-1-2.png) | ![step 3 of creating pull request](docs/pull-3.png)
-
 
 9. Use `git pull origin main` to retrieve other people's changes and merge them into your code.
 
