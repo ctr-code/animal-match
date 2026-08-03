@@ -28,13 +28,13 @@ Steps 1 & 2 | Step 3
 
 ## User Stories
 
-- As a player, I want to choose from several animal sets such as Ocean, Sea and Air animals, so that I can play with different themes.
+- As a player, I want to choose from several animal sets such as Land, Sea and Air animals, so that I can play with different themes.
   - Acceptance Criteria:
     - [ ] The game offers multiple animal sets for selection.
     - [ ] Each set has a clear name and theme.
     - [ ] Selecting a set loads the matching questions and images.
   - Tasks:
-    - [ ] Display a card for each of Ocean, Sea and Air animals.
+    - [ ] Display a card for each of Land, Sea and Air animals.
     - [ ] When a card is selected switch to the game page with the url fragment specifying the selection, e.g. `./game.html#air`.
 
 - As a player, I want to choose a difficulty level so I can continue to challenge myself.
