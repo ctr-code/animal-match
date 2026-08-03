@@ -18,15 +18,18 @@ A game of matching animal descriptions to pictures.
 
 7. After you have made some changes and committed them use `git push -u origin your-name-here` to push them to your branch on github.  After you've done this once you can simply use `git push` for future updates.
 
-8. After pushing a change create a pull request, which will prompt me to integrate the change into the main branch.
+8. After pushing a change, go to github to create a pull request.  If you see a pull request banner (red arrow) click on the "Compare & pull request" button.  Otherwise, select your branch in the drop down (purple arrow), and click on the "commits ahead" text (green arrow).  You should see something like the second screenshot.  Click on the "Create pull request" button.
+
+Steps 1 & 2 | Step 3
+:--: | :--:
+![steps 1&2 of creating pull request](docs/pull-1-2.png) | ![step 3 of creating pull request](docs/pull-3.png)
 
 9. Use `git pull origin main` to retrieve other people's changes and merge them into your code.
 
+
 ## User Stories
 
-I used AI to generate these.  This is different from the original vision because it is no longer a game of elimination; you just do the questions one at a time.  On the other hand, I think an elimination version would require an extra screen to show the correct answers otherwise it would be quite annoying.  This is simpler.
-
-- As a player, I want to choose from several animal sets such as jungle, farm, and wild British animals, so that I can play with different themes.
+- As a player, I want to choose from several animal sets such as Ocean, Sea and Air animals, so that I can play with different themes.
 - As a player, I want to see a list of available animal sets before starting, so that I can select one that interests me.
 - As a player, I want to view a description of an animal and a set of pictures of possible answers, so that I can identify the correct animal.
 - As a player, I want to select one animal from the picture choices, so that I can make my guess.
