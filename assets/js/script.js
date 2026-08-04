@@ -6,7 +6,7 @@ const air_bat = "air-bat";
 const air_bumblebee = "air-bumblebee";
 const air_hummingbird = "air-hummingbird";
 const air_kestrel = "air-kestrel";
-const air_peregrine_falcon = "air-peregrin-falcon";
+const air_peregrine_falcon = "air-peregrine-falcon";
 const air_pigeon = "air-pigeon";
 const air_raven = "air-raven";
 const air_stork = "air-stork";
@@ -240,6 +240,7 @@ const themeNameMap = new Map([
 ]);
 
 // Game state
+let currentTheme = "";
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let currentScore;
@@ -276,7 +277,7 @@ function shuffle(as) {
 }
 
 function showSection(id) {
-    const sections = ["game-section"];
+    const sections = ["hero", "set-selection", "difficulty-selection", "start-game-container", "landing-stats", "game-section", "round-complete-panel"];
     for (const section of sections) {
         if (section === id) {
             document.getElementById(section).classList.remove("hidden");
@@ -292,7 +293,14 @@ function showSection(id) {
 function displayQuestion(parent, question) {
     document.getElementById("question-count").textContent = `${currentQuestionIndex + 1} / ${currentQuestions.length}`;
 
+    const progressBar = parent.querySelector(".progress-bar");
+    const percent = 100 * (currentQuestionIndex + 1) / currentQuestions.length;
+    progressBar.style.width = `${percent}%`;
+    progressBar.setAttribute("aria-valuenow", percent);
+
     parent.querySelector(".clue-text").textContent = question.question;
+
+    document.getElementById("score-value").textContent = currentScore;
 
     // Shuffle the options so they are displayed in a different order each time
     const options = shuffle(question.options);
@@ -302,17 +310,28 @@ function displayQuestion(parent, question) {
         const button = buttons[i];
         const creature = options[i];
         button.dataset.answer = creature;
-        const url = `./assets/images/${creature}.png`;
+        const url = `./assets/images/${creature.replace("-", "/")}.png`;
         button.querySelector("img").src = url;
-        button.querySelector("p").textContent = animalNameMap.get(creature);
+        button.querySelector(".answer-name").textContent = animalNameMap.get(creature);
     }
 }
 
 function initialiseListeners(parent) {
     const buttons = parent.querySelectorAll(".answer-option-btn");
-    for (button of buttons) {
-        button.addEventListener("click", answerClick)
+    for (const button of buttons) {
+        button.addEventListener("click", answerClick);
     }
+    const themes = document.querySelectorAll(".theme-card");
+    for (const theme of themes) {
+        theme.addEventListener("click", clickTheme);
+    }
+    document.getElementById("play-again-btn").addEventListener("click", e => { startGame(currentTheme); });
+    document.getElementById("choose-set-btn").addEventListener("click", e => { showSection("set-selection"); });
+}
+
+function clickTheme(e) {
+    const cardElement = e.currentTarget;
+    startGame(cardElement.dataset.set);
 }
 
 function answerClick(e) {
@@ -347,12 +366,15 @@ function nextQuestion() {
 }
 
 function gameOver() {
-
+    document.getElementById("final-score").textContent = `${currentScore * 10}`;
+    document.getElementById("final-correct").textContent = `${currentScore} / ${currentQuestions.length}`;
+    showSection("round-complete-panel");
 }
 
 function startGame(theme) {
     document.getElementById("theme-value").textContent = themeNameMap.get(theme);
 
+    currentTheme = theme;
     currentQuestions = shuffle(questions[theme]);
     currentQuestionIndex = 0;
     currentScore = 0;
@@ -363,4 +385,4 @@ function startGame(theme) {
 }
 
 initialiseListeners(document.getElementById("game-section"));
-startGame("sea");
+showSection("set-selection");
