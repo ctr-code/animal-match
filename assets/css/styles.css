@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Henny+Penny&display=swap');
 
 :root {
-  --bg: #FFF7E6;
-  --panel: #BDE0FE;
-  --primary: #FFD166;
-  --accent: #FB8500;
-  --success: #95D5BE;
-  --text: #243047;
-  --muted: #5F6B7A;
-  --error: #D95C4D;
+  --bg: #f8f1cf;
+  --panel: #d7f0a9;
+  --panel-warm: #fff6dd;
+  --primary: #ffd457;
+  --accent: #ef7d32;
+  --success: #87c96f;
+  --teal: #4cb7c8;
+  --text: #20311f;
+  --muted: #5d6f57;
+  --error: #d95c4d;
   --white: #FFFFFF;
-  --border: rgba(36, 48, 71, 0.14);
-  --shadow: 0 18px 40px rgba(36, 48, 71, 0.12);
-  --shadow-soft: 0 10px 20px rgba(36, 48, 71, 0.08);
+  --border: rgba(32, 49, 31, 0.12);
+  --shadow: 0 22px 48px rgba(32, 49, 31, 0.16);
+  --shadow-soft: 0 10px 22px rgba(32, 49, 31, 0.1);
 }
 
 * {
@@ -29,10 +31,7 @@ body.app-bg {
   font-family: "Caveat", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.15)
-    ),
+    linear-gradient(180deg, rgba(11, 32, 22, 0.22), rgba(255, 241, 199, 0.08) 26%, rgba(255, 255, 255, 0.02) 100%),
     url("../images/bg-image.png");
 
   background-size: cover;
@@ -47,11 +46,10 @@ body.app-bg::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
-    radial-gradient(rgba(36, 48, 71, 0.02) 1px, transparent 1px);
-  background-position: 0 0, 18px 18px;
-  background-size: 36px 36px;
-  opacity: 0.35;
+    radial-gradient(circle at 20% 10%, rgba(255, 214, 87, 0.2), transparent 28%),
+    radial-gradient(circle at 80% 14%, rgba(76, 183, 200, 0.16), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(239, 125, 50, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
   mix-blend-mode: normal;
 }
 
@@ -62,27 +60,31 @@ body.app-bg::before {
 
 .app-navbar {
   position: relative;
-  height: 210px;
+  min-height: 210px;
   z-index: 2;
   display: flex;
   align-items: center;
   padding: 0; /* keeps navbar height balanced */
-  background: url("../images/navbar-bg.png") center/cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(8, 26, 18, 0.06), rgba(8, 26, 18, 0.18)),
+    url("../images/navbar-bg.png") center/cover no-repeat;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.16);
 }
 
 /* Title styling */
 .app-title {
   font-family: "Henny Penny", cursive;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  color: #ffffff;
+  color: #fffdf5;
   letter-spacing: 0.03em;
   text-decoration: none;
   margin-left: 1rem;
+  text-shadow: 0 2px 10px rgba(17, 38, 26, 0.42);
 }
 
 .app-title:hover,
 .app-title:focus-visible {
-  color: var(--accent);
+  color: #fff0a8;
 }
 
 /* Help button styling */
@@ -93,12 +95,13 @@ body.app-bg::before {
   gap: 0.5rem;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: var(--white);
-  border: 2px solid rgba(251, 133, 0, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(239, 125, 50, 0.16);
   color: var(--accent);
   font-weight: 700;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 24px rgba(32, 49, 31, 0.12);
   margin-right: 1rem; /* keeps spacing from edge */
+  backdrop-filter: blur(10px);
 }
 
 .help-link:hover,
@@ -110,21 +113,28 @@ body.app-bg::before {
 
 main.container {
   max-width: 1180px;
+  position: relative;
+  z-index: 1;
 }
 
 #hero {
-  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
-  border-radius: 1.5rem;
-  background: linear-gradient(135deg, rgba(189, 224, 254, 0.82), rgba(255, 247, 230, 0.96));
-  border: 1px solid rgba(36, 48, 71, 0.08);
+  padding: clamp(1.1rem, 2vw, 1.75rem) clamp(1rem, 2vw, 1.5rem);
+  border-radius: 1.75rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 246, 215, 0.88)),
+    radial-gradient(circle at top left, rgba(255, 214, 87, 0.34), transparent 46%),
+    radial-gradient(circle at bottom right, rgba(76, 183, 200, 0.18), transparent 38%);
+  border: 1px solid rgba(32, 49, 31, 0.08);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 #hero h1 {
   font-family: "Henny Penny", cursive;
   font-size: clamp(2.1rem, 4vw, 4rem);
-  color: var(--text);
+  color: #223321;
   line-height: 1.05;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .app-subtitle {
@@ -134,13 +144,161 @@ main.container {
   color: var(--muted);
 }
 
+#set-selection h2,
+#difficulty-selection h2,
+#landing-stats h2 {
+  color: #263a24;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.theme-card,
+.stats-panel,
+.difficulty-btn,
+.btn-start {
+  border: 0;
+  border-radius: 1.5rem;
+}
+
+.theme-card,
+.stats-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 247, 230, 0.92));
+  border: 1px solid rgba(32, 49, 31, 0.08);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+}
+
+.theme-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.theme-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 214, 87, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
+.theme-card:hover,
+.theme-card:focus-within,
+.theme-card.selected {
+  transform: translateY(-4px);
+  border-color: rgba(239, 125, 50, 0.32);
+  box-shadow: 0 18px 36px rgba(32, 49, 31, 0.14);
+}
+
+.theme-image-placeholder {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.55)),
+    linear-gradient(135deg, rgba(255, 214, 87, 0.55), rgba(135, 201, 111, 0.28));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 10px 18px rgba(32, 49, 31, 0.12);
+}
+
+.theme-meta,
+.text-muted-custom,
+.stat-label {
+  color: var(--muted);
+}
+
+.difficulty-btn,
+.btn-start {
+  font-family: "Caveat", "Segoe UI", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  box-shadow: 0 12px 22px rgba(32, 49, 31, 0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.difficulty-btn {
+  min-width: 7rem;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--text);
+  border: 1px solid rgba(32, 49, 31, 0.1);
+}
+
+.difficulty-btn:hover,
+.difficulty-btn:focus-visible,
+.difficulty-btn.active {
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(255, 212, 87, 0.95), rgba(255, 235, 166, 0.95));
+  border-color: rgba(239, 125, 50, 0.28);
+  transform: translateY(-2px);
+}
+
+.btn-start {
+  min-width: 14rem;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--primary), #ffe58c 55%, #fff2c5);
+  border: 1px solid rgba(239, 125, 50, 0.18);
+  box-shadow: 0 16px 28px rgba(239, 125, 50, 0.24);
+}
+
+.btn-start:hover,
+.btn-start:focus-visible {
+  color: var(--text);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 18px 32px rgba(239, 125, 50, 0.28);
+}
+
+.stats-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -55% -10%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(76, 183, 200, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.stat-item {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0.8rem;
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(32, 49, 31, 0.08);
+}
+
+.stat-icon {
+  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
+}
+
+.stat-label {
+  margin-bottom: 0.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-family: "Henny Penny", cursive;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  color: #254424;
+}
+
 .game-section {
   margin-top: 1rem;
   padding: clamp(0.85rem, 1.5vw, 1.35rem);
-  border-radius: 1.5rem;
-  background: rgba(255, 247, 230, 0.7);
-  border: 1px solid rgba(36, 48, 71, 0.08);
+  border-radius: 1.75rem;
+  background: linear-gradient(180deg, rgba(255, 250, 234, 0.78), rgba(243, 251, 226, 0.76));
+  border: 1px solid rgba(32, 49, 31, 0.08);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
 }
 
 .game-status-bar {
@@ -161,8 +319,10 @@ main.container {
 .status-card {
   padding: 0.8rem 0.9rem;
   min-height: 100%;
-  border: 1px solid rgba(36, 48, 71, 0.08);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 230, 0.92));
+  border: 1px solid rgba(32, 49, 31, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 251, 239, 0.92)),
+    radial-gradient(circle at top right, rgba(135, 201, 111, 0.2), transparent 38%);
 }
 
 .status-label,
@@ -180,19 +340,19 @@ main.container {
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   line-height: 1;
   font-weight: 700;
-  color: var(--text);
+  color: #254424;
 }
 
 .game-progress {
   height: 0.75rem;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(189, 224, 254, 0.6);
-  box-shadow: inset 0 2px 8px rgba(36, 48, 71, 0.06);
+  background: rgba(135, 201, 111, 0.2);
+  box-shadow: inset 0 2px 8px rgba(32, 49, 31, 0.08);
 }
 
 .game-progress-bar {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--success), var(--primary) 55%, var(--accent));
   border-radius: inherit;
 }
 
@@ -204,7 +364,7 @@ main.container {
 .answer-panel,
 .complete-card {
   overflow: hidden;
-  border: 1px solid rgba(36, 48, 71, 0.08);
+  border: 1px solid rgba(32, 49, 31, 0.08);
 }
 
 .clue-card .card-body,
@@ -213,14 +373,16 @@ main.container {
 }
 
 .clue-card {
-  background: linear-gradient(180deg, rgba(189, 224, 254, 0.95), rgba(255, 255, 255, 0.88));
+  background:
+    linear-gradient(180deg, rgba(217, 240, 169, 0.32), rgba(255, 255, 255, 0.9)),
+    radial-gradient(circle at top left, rgba(255, 214, 87, 0.18), transparent 45%);
 }
 
 .clue-title,
 .answer-panel-title,
 .complete-title {
   font-family: "Henny Penny", cursive;
-  color: var(--text);
+  color: #20311f;
   font-size: clamp(1.15rem, 1.9vw, 1.5rem);
 }
 
@@ -233,11 +395,13 @@ main.container {
 .clue-text {
   font-size: clamp(1.1rem, 1.9vw, 1.55rem);
   line-height: 1.18;
-  color: var(--text);
+  color: #243622;
 }
 
 .answer-panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(189, 224, 254, 0.28));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(212, 243, 219, 0.24)),
+    radial-gradient(circle at 100% 0%, rgba(76, 183, 200, 0.12), transparent 28%);
 }
 
 #answer-grid {
@@ -266,7 +430,9 @@ main.container {
   border-radius: 1.25rem;
   overflow: hidden;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-  background: linear-gradient(180deg, rgba(255, 247, 230, 0.98), rgba(255, 255, 255, 1));
+  background:
+    linear-gradient(180deg, rgba(255, 252, 241, 0.99), rgba(255, 255, 255, 1)),
+    radial-gradient(circle at top, rgba(255, 214, 87, 0.16), transparent 46%);
 }
 
 .answer-card::after {
@@ -274,14 +440,14 @@ main.container {
   position: absolute;
   inset: auto 0 0;
   height: 0.45rem;
-  background: linear-gradient(90deg, var(--primary), var(--accent), var(--success));
+  background: linear-gradient(90deg, var(--success), var(--primary), var(--accent), var(--teal));
 }
 
 .answer-option-btn:hover .answer-card,
 .answer-option-btn:focus-visible .answer-card {
   transform: translateY(-3px);
-  border-color: rgba(251, 133, 0, 0.4);
-  box-shadow: 0 16px 28px rgba(36, 48, 71, 0.14);
+  border-color: rgba(239, 125, 50, 0.4);
+  box-shadow: 0 16px 28px rgba(32, 49, 31, 0.14);
 }
 
 .answer-option-btn:hover .answer-image,
@@ -300,8 +466,8 @@ main.container {
   justify-content: center;
   padding: 0.65rem 0.65rem 0 0.65rem;
   background:
-    radial-gradient(circle at top, rgba(255, 209, 102, 0.35), transparent 58%),
-    linear-gradient(180deg, rgba(189, 224, 254, 0.5), rgba(255, 255, 255, 0.25));
+    radial-gradient(circle at top, rgba(255, 214, 87, 0.36), transparent 58%),
+    linear-gradient(180deg, rgba(212, 243, 219, 0.56), rgba(255, 255, 255, 0.2));
 }
 
 .answer-image {
@@ -309,13 +475,13 @@ main.container {
   height: 100%;
   object-fit: contain;
   transition: transform 180ms ease;
-  filter: drop-shadow(0 10px 12px rgba(36, 48, 71, 0.14));
+  filter: drop-shadow(0 10px 12px rgba(32, 49, 31, 0.14));
 }
 
 .answer-name {
   font-family: "Henny Penny", cursive;
   font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  color: var(--text);
+  color: #243622;
 }
 
 .feedback-area {
@@ -329,9 +495,9 @@ main.container {
   width: 100%;
   padding: 0.65rem 0.9rem;
   border-radius: 999px;
-  background: rgba(149, 213, 190, 0.28);
-  border: 1px solid rgba(149, 213, 190, 0.55);
-  color: #1b5d47;
+  background: rgba(135, 201, 111, 0.24);
+  border: 1px solid rgba(135, 201, 111, 0.58);
+  color: #21543f;
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -360,7 +526,7 @@ main.container {
 .game-submit-btn,
 .complete-primary-btn {
   color: var(--text);
-  background: linear-gradient(135deg, var(--primary), #ffe29a);
+  background: linear-gradient(135deg, var(--primary), #ffe29a 55%, #fff5c9);
 }
 
 .game-next-btn,
@@ -387,7 +553,9 @@ main.container {
 }
 
 .complete-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(189, 224, 254, 0.35));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 251, 226, 0.4)),
+    radial-gradient(circle at top, rgba(255, 214, 87, 0.14), transparent 34%);
 }
 
 .trophy-circle {
@@ -410,8 +578,10 @@ main.container {
 
 .summary-box {
   padding: 0.9rem 1rem;
-  border: 1px solid rgba(36, 48, 71, 0.08);
-  background: linear-gradient(180deg, rgba(255, 247, 230, 0.95), rgba(255, 255, 255, 0.96));
+  border: 1px solid rgba(32, 49, 31, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 235, 0.96)),
+    radial-gradient(circle at right top, rgba(76, 183, 200, 0.12), transparent 35%);
 }
 
 .summary-value {
@@ -428,6 +598,10 @@ main.container {
   }
 
   .game-section {
+    border-radius: 1.5rem;
+  }
+
+  .stats-panel {
     border-radius: 1.5rem;
   }
 
@@ -480,6 +654,13 @@ main.container {
     padding-top: 0.7rem;
   }
 
+  .theme-card,
+  .stats-panel,
+  .difficulty-btn,
+  .btn-start {
+    border-radius: 1.25rem;
+  }
+
   .game-submit-btn,
   .game-next-btn,
   .complete-primary-btn,
@@ -522,5 +703,24 @@ main.container {
 
   #answer-grid > [class*="col-"] {
     margin-bottom: 0.85rem;
+  }
+
+  .stat-item {
+    padding: 0.9rem 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body.app-bg {
+    background-attachment: scroll;
   }
 }
