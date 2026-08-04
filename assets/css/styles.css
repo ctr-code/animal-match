@@ -29,9 +29,15 @@ body.app-bg {
   font-family: "Caveat", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 209, 102, 0.38), transparent 28%),
-    radial-gradient(circle at top right, rgba(189, 224, 254, 0.7), transparent 26%),
-    linear-gradient(180deg, #fffdf4 0%, var(--bg) 55%, #fef4d8 100%);
+    linear-gradient(
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    url("../images/bg-image.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -41,12 +47,12 @@ body.app-bg::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-    radial-gradient(rgba(36, 48, 71, 0.03) 1px, transparent 1px);
+    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    radial-gradient(rgba(36, 48, 71, 0.02) 1px, transparent 1px);
   background-position: 0 0, 18px 18px;
   background-size: 36px 36px;
-  opacity: 0.65;
-  mix-blend-mode: soft-light;
+  opacity: 0.35;
+  mix-blend-mode: normal;
 }
 
 .container {
@@ -55,18 +61,23 @@ body.app-bg::before {
 }
 
 .app-navbar {
-  background: rgba(255, 247, 230, 0.8);
-  border-bottom: 1px solid rgba(36, 48, 71, 0.08);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 8px 30px rgba(36, 48, 71, 0.05);
+  position: relative;
+  height: 210px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0; /* keeps navbar height balanced */
+  background: url("../images/navbar-bg.png") center/cover no-repeat;
 }
 
+/* Title styling */
 .app-title {
   font-family: "Henny Penny", cursive;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: var(--text);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #ffffff;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-left: 1rem;
 }
 
 .app-title:hover,
@@ -74,6 +85,7 @@ body.app-bg::before {
   color: var(--accent);
 }
 
+/* Help button styling */
 .help-link {
   display: inline-flex;
   align-items: center;
@@ -86,6 +98,7 @@ body.app-bg::before {
   color: var(--accent);
   font-weight: 700;
   box-shadow: var(--shadow-soft);
+  margin-right: 1rem; /* keeps spacing from edge */
 }
 
 .help-link:hover,
@@ -141,7 +154,7 @@ main.container {
 .summary-box {
   border: 0;
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--accent);
   box-shadow: var(--shadow-soft);
 }
 
