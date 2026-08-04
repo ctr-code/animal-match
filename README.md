@@ -64,11 +64,11 @@ The site owner’s goal is to build an interactive single-page game that allows 
 
 - As a player, I want to choose from several animal sets such as Land, Sea and Air animals, so that I can play with different themes.
   - Acceptance Criteria:
-    - [ ] Display a card for each of Land, Sea and Air animals.
-    - [ ] When a card is selected switch to the game page with the url fragment specifying the selection, e.g. `./game.html#air`.
+    - Display a card for each of Land, Sea and Air animals.
+    - When a card is selected switch to the game page with the URL fragment specifying the selection, e.g. `./game.html#air`.
 - As a player, I want to choose a difficulty level so I can continue to challenge myself.
   - Acceptance Criteria:
-    - [ ] The game provides at least one selectable difficulty option.
+    - The game provides at least one selectable difficulty option.
 - As a player, I want to view a description of an animal and a set of pictures of possible answers, so that I can identify the correct animal.
 - As a player, I want to select one animal from the picture choices, so that I can make my guess.
 - As a player, I want to move to the next description after I answer, so that the game continues smoothly.
@@ -120,6 +120,7 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 * **HTML5**
 * **CSS3**
 * **JavaScript**
+* **Bootstrap**
 * **GitHub** for repository management and hosting
 
 ---
@@ -156,7 +157,9 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 
 ## Credit and Thanks
 
-* **Code Institute** and its tutors for teaching, support, and project guidance.
-* **West Midlands Combined Authority** for funding the course.
-* **Tim Berners-Lee et al.** for creating the web.
-* **GitHub** for repository hosting and GitHub Pages.
+* **[Code Institute](https://codeinstitute.net/)** and its tutors for teaching, support, and project guidance.
+* **[West Midlands Combined Authority](https://www.wmca.org.uk/)** for funding the course.
+* **[Tim Berners-Lee](https://w3.org/) et al.** for creating the web.
+* **[GitHub](https://github.com/)** for repository hosting and GitHub Pages.
+* **[Bootstrap](https://getbootstrap.com/)** for layout styling and component styling.
+* **[Coolors](https://coolors.co/)** for color palette generation.
