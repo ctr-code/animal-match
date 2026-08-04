@@ -233,6 +233,134 @@ const questions = {
     ]
 };
 
+const themeNameMap = new Map([
+    ["sea", "Sea"],
+    ["land", "Land"],
+    ["air", "Air"]
+]);
+
+// Game state
+let currentQuestions = [];
+let currentQuestionIndex = 0;
+let currentScore;
+
+/**
+ *
+ * @param {*} bound - The maximum return value + 1
+ * @returns An integer between 0 and bound-1
+ */
+function randomInteger(bound) {
+    return Math.floor(Math.random() * bound);
+}
+
+/**
+ *
+ * @param {*} as - an array to copy and shuffle
+ * @returns a shuffled, shallow copy of the array
+ */
+function shuffle(as) {
+    let bs = Array.from(as);
+
+    function swap(j, k) {
+        const temp = bs[j];
+        bs[j] = bs[k];
+        bs[k] = temp;
     }
+
+    for (let i = bs.length - 1; i > 0; --i) {
+        const source = randomInteger(i + 1);
+        swap(source, i);
     }
+
+    return bs;
+}
+
+function showSection(id) {
+    const sections = ["game-section"];
+    for (const section of sections) {
+        if (section === id) {
+            document.getElementById(section).classList.remove("hidden");
+        }
     }
+    for (const section of sections) {
+        if (section !== id) {
+            document.getElementById(section).classList.add("hidden");
+        }
+    }
+}
+
+function displayQuestion(parent, question) {
+    document.getElementById("question-count").textContent = `${currentQuestionIndex + 1} / ${currentQuestions.length}`;
+
+    parent.querySelector(".clue-text").textContent = question.question;
+
+    // Shuffle the options so they are displayed in a different order each time
+    const options = shuffle(question.options);
+
+    const buttons = parent.querySelectorAll(".answer-option-btn");
+    for (let i = 0; i !== buttons.length; ++i) {
+        const button = buttons[i];
+        const creature = options[i];
+        button.dataset.answer = creature;
+        const url = `./assets/images/${creature}.png`;
+        button.querySelector("img").src = url;
+        button.querySelector("p").textContent = animalNameMap.get(creature);
+    }
+}
+
+function initialiseListeners(parent) {
+    const buttons = parent.querySelectorAll(".answer-option-btn");
+    for (button of buttons) {
+        button.addEventListener("click", answerClick)
+    }
+}
+
+function answerClick(e) {
+    if (currentQuestionIndex < currentQuestions.length) {
+        const button = e.currentTarget;
+        const answer = button.dataset.answer;
+        if (answer === currentQuestions[currentQuestionIndex].animalName) {
+            correctAnswer();
+        } else {
+            wrongAnswer();
+        }
+    }
+}
+
+function wrongAnswer() {
+    nextQuestion();
+}
+
+function correctAnswer() {
+    currentScore++;
+    document.getElementById("score-value").textContent = currentScore;
+    nextQuestion();
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex === currentQuestions.length) {
+        gameOver();
+    } else {
+        displayQuestion(document.getElementById("game-section"), currentQuestions[currentQuestionIndex]);
+    }
+}
+
+function gameOver() {
+
+}
+
+function startGame(theme) {
+    document.getElementById("theme-value").textContent = themeNameMap.get(theme);
+
+    currentQuestions = shuffle(questions[theme]);
+    currentQuestionIndex = 0;
+    currentScore = 0;
+
+    displayQuestion(document.getElementById("game-section"), currentQuestions[currentQuestionIndex]);
+
+    showSection("game-section");
+}
+
+initialiseListeners(document.getElementById("game-section"));
+startGame("sea");
