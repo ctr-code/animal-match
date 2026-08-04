@@ -20,10 +20,11 @@
                 </button>
             </div>
         </div>
-    </nav>   
+    </nav>
 
     <main class="container py-4 py-md-5">
 
+        <!-- HERO SECTION -->
         <section id="hero" class="text-center mb-5">
             <h1 class="fw-bold mb-3">Animal Match</h1>
             <p class="app-subtitle mx-auto">
@@ -31,35 +32,126 @@
             </p>
         </section>
 
+        <!-- LANDING SECTION: SET SELECTION -->
+        <section class="mb-5" id="set-selection">
+            <h2 class="h3 fw-bold text-center mb-4">Select a Set</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card theme-card h-100 text-center selected" data-set="land">
+                        <div class="card-body p-4">
+                            <div class="theme-image-placeholder mb-3">🦒</div>
+                            <h3 class="h5 fw-bold mb-2">Land Animals</h3>
+                            <p class="text-muted-custom mb-2">Giraffes, elephants, sloths and more.</p>
+                            <small class="theme-meta" id="land-count">12 Animals</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card theme-card h-100 text-center" data-set="sea">
+                        <div class="card-body p-4">
+                            <div class="theme-image-placeholder mb-3">🐠</div>
+                            <h3 class="h5 fw-bold mb-2">Sea Animals</h3>
+                            <p class="text-muted-custom mb-2">Clownfish, sharks, whales and more.</p>
+                            <small class="theme-meta" id="sea-count">12 Animals</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card theme-card h-100 text-center" data-set="air">
+                        <div class="card-body p-4">
+                            <div class="theme-image-placeholder mb-3">🦅</div>
+                            <h3 class="h5 fw-bold mb-2">Air Animals</h3>
+                            <p class="text-muted-custom mb-2">Falcons, hummingbirds, bats and more.</p>
+                            <small class="theme-meta" id="air-count">12 Animals</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LANDING SECTION: DIFFICULTY -->
+        <section class="mb-5 text-center" id="difficulty-selection">
+            <h2 class="h4 fw-bold mb-3">Choose Difficulty</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn difficulty-btn active" data-difficulty="easy" type="button">Easy</button>
+                <button class="btn difficulty-btn" data-difficulty="medium" type="button">Medium</button>
+                <button class="btn difficulty-btn" data-difficulty="hard" type="button">Hard</button>
+            </div>
+            <p class="small text-muted-custom mt-3 mb-0">
+                Easy is currently fully available. Medium and Hard can be added next.
+            </p>
+        </section>
+
+        <!-- LANDING SECTION: START BUTTON -->
+        <section class="text-center mb-5" id="start-game-container">
+            <h2 class="visually-hidden">Start Actions</h2>
+            <button id="start-game-btn" class="btn btn-start px-5 py-3 fw-bold" type="button">
+                Start Game
+            </button>
+        </section>
+
+        <!-- LANDING SECTION: STATS -->
+        <section class="stats-panel p-3 p-md-4 mb-5" id="landing-stats">
+            <h2 class="visually-hidden">Game Statistics</h2>
+            <div class="row text-center g-3">
+                <div class="col-12 col-md-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">🎮</div>
+                        <div class="stat-label">Games Played</div>
+                        <div class="stat-value" id="games-played-display">0</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-label">Questions Per Set</div>
+                        <div class="stat-value">8</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-label">Average Time</div>
+                        <div class="stat-value" id="average-time-display">0s</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- GAME SECTION -->
         <section id="game-section" class="game-section py-4 py-md-5">
+            <h2 class="visually-hidden">Game Play Area</h2>
 
             <!-- GAME HEADER / STATUS -->
             <div id="game-status-bar" class="game-status-bar mb-4">
                 <div class="row g-3">
                     <div class="col-6 col-md-3">
-                        <div class="status-card text-center" id="theme-card">
+                        <div class="status-card text-center">
                             <p class="status-label mb-1">Theme</p>
                             <p class="status-value mb-0" id="theme-value">Land</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3">
-                        <div class="status-card text-center" id="difficulty-card">
+                        <div class="status-card text-center">
                             <p class="status-label mb-1">Difficulty</p>
                             <p class="status-value mb-0" id="difficulty-value">Easy</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3">
-                        <div class="status-card text-center" id="question-progress-card">
+                        <div class="status-card text-center">
                             <p class="status-label mb-1">Question</p>
                             <p class="status-value mb-0" id="question-count">1 / 8</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3">
-                        <div class="status-card text-center" id="score-card">
+                        <div class="status-card text-center">
                             <p class="status-label mb-1">Score</p>
                             <p class="status-value mb-0" id="score-value">0</p>
                         </div>
@@ -85,7 +177,7 @@
                         <div id="clue-card" class="card clue-card h-100">
                             <div class="card-body d-flex flex-column">
                                 <div class="clue-header mb-3">
-                                    <h2 class="clue-title h5 fw-bold mb-0">Description</h2>
+                                    <h3 class="clue-title h5 fw-bold mb-0">Description</h3>
                                 </div>
 
                                 <div id="clue-content" class="clue-content flex-grow-1">
@@ -104,163 +196,137 @@
                             <div class="card-body">
 
                                 <div class="answer-panel-header text-center mb-4">
-                                    <h2 class="answer-panel-title h5 fw-bold mb-0">Which animal is this?</h2>
+                                    <h3 class="answer-panel-title h5 fw-bold mb-0">Which animal is this?</h3>
                                 </div>
 
                                 <!-- ANSWER GRID -->
                                 <div id="answer-grid" class="row g-3">
 
-                                    <!-- ANSWER CARD 1 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-1" value="Giraffe">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-1">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Giraffe" id="answer-option-1">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-giraffe.png" alt="Giraffe"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Giraffe</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Giraffe</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                    <!-- ANSWER CARD 2 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-2" value="Elephant">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-2">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Elephant" id="answer-option-2">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-elephant.png" alt="Elephant"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Elephant</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Elephant</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                    <!-- ANSWER CARD 3 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-3" value="Sloth">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-3">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Sloth" id="answer-option-3">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-sloth.png" alt="Sloth"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Sloth</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Sloth</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                    <!-- ANSWER CARD 4 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-4" value="Porcupine">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-4">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Porcupine" id="answer-option-4">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-porcupine.png" alt="Porcupine"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Porcupine</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Porcupine</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                    <!-- ANSWER CARD 5 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-5" value="Camel">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-5">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Camel" id="answer-option-5">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-camel.png" alt="Camel"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Camel</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Camel</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                    <!-- ANSWER CARD 6 -->
                                     <div class="col-6 col-md-4">
-                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
-                                            id="answer-option-6" value="Civet">
-                                        <label class="card answer-card h-100 text-center answer-option-label"
-                                            for="answer-option-6">
+                                        <button type="button"
+                                            class="answer-option-btn answer-card w-100 h-100 text-center"
+                                            data-answer="Civet" id="answer-option-6">
                                             <span class="answer-image-wrapper d-block">
                                                 <img src="assets/images/land-civet.png" alt="Civet"
                                                     class="answer-image img-fluid">
                                             </span>
-                                            <span class="card-body py-2 d-block">
-                                                <span class="answer-name d-block">Civet</span>
+                                            <span class="card-body d-block py-2">
+                                                <span class="answer-name">Civet</span>
                                             </span>
-                                        </label>
+                                        </button>
                                     </div>
 
-                                </div>
-
-                                <!-- FEEDBACK AREA -->
-                                <div id="feedback-area" class="feedback-area mt-4">
-                                    <div id="feedback-message" class="feedback-message d-none" role="alert"
-                                        aria-live="polite">
-                                        Correct!
-                                    </div>
-                                </div>
-
-                                <!-- GAME ACTIONS -->
-                                <div id="game-actions"
-                                    class="game-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
-                                    <button id="submit-btn" class="btn game-submit-btn px-4 py-2" type="button">
-                                        Submit Answer
-                                    </button>
-
-                                    <button id="next-btn" class="btn game-next-btn px-4 py-2 d-none" type="button">
-                                        Next Question
-                                    </button>
                                 </div>
 
                             </div>
+
+                            <!-- FEEDBACK AREA -->
+                            <div id="feedback-area" class="feedback-area mt-4">
+                                <div id="feedback-message" class="feedback-message" role="alert" aria-live="polite">
+                                    Correct!
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </div>            
 
             <!-- ROUND COMPLETE PANEL -->
-            <div id="round-complete-panel" class="round-complete-panel d-none mt-5">
+            <div id="round-complete-panel" class="round-complete-panel mt-5">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8">
                         <div class="card complete-card text-center">
                             <div class="card-body p-4 p-md-5">
 
                                 <div class="complete-icon-wrapper mb-3">
-                                    <div class="trophy-circle" id="trophy-circle">🏆</div>
+                                    <div class="trophy-circle">🏆</div>
                                 </div>
 
-                                <h2 id="complete-title" class="complete-title fw-bold mb-2">Round Complete!</h2>
+                                <h3 id="complete-title" class="complete-title fw-bold mb-2">Round Complete!</h3>
                                 <p id="complete-text" class="complete-text mb-4">
                                     Great job! You’ve finished this set.
                                 </p>
 
                                 <div class="row g-3 justify-content-center mb-4">
                                     <div class="col-12 col-sm-6">
-                                        <div id="final-score-box" class="summary-box">
+                                        <div class="summary-box">
                                             <p class="summary-label mb-1">Your Score</p>
                                             <p class="summary-value mb-0" id="final-score">65</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12 col-sm-6">
-                                        <div id="final-correct-box" class="summary-box">
+                                        <div class="summary-box">
                                             <p class="summary-label mb-1">Correct Answers</p>
                                             <p class="summary-value mb-0" id="final-correct">6 / 8</p>
                                         </div>
