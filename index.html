@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Match</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="app-bg">
@@ -25,262 +25,272 @@
     <main class="container py-4 py-md-5">
 
         <section id="hero" class="text-center mb-5">
-            <h1 class="fw-bold mb-3">Choose an Animal Set</h1>
+            <h1 class="fw-bold mb-3">Animal Match</h1>
             <p class="app-subtitle mx-auto">
-                Pick a theme and start matching animal descriptions to pictures!
+                Read the clue and choose the correct animal.
             </p>
         </section>
 
-        <main>
-            <!-- GAME SECTION -->
-            <section id="game-section" class="game-section py-4 py-md-5">
-                <div class="container">
+        <!-- GAME SECTION -->
+        <section id="game-section" class="game-section py-4 py-md-5">
 
-                    <!-- GAME HEADER / STATUS -->
-                    <div id="game-status-bar" class="game-status-bar mb-4">
-                        <div class="row g-3">
-                            <div class="col-6 col-md-3">
-                                <div class="status-card text-center" id="theme-card">
-                                    <p class="status-label mb-1">Theme</p>
-                                    <p class="status-value mb-0" id="theme-value">Land</p>
+            <!-- GAME HEADER / STATUS -->
+            <div id="game-status-bar" class="game-status-bar mb-4">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="status-card text-center" id="theme-card">
+                            <p class="status-label mb-1">Theme</p>
+                            <p class="status-value mb-0" id="theme-value">Land</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="status-card text-center" id="difficulty-card">
+                            <p class="status-label mb-1">Difficulty</p>
+                            <p class="status-value mb-0" id="difficulty-value">Easy</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="status-card text-center" id="question-progress-card">
+                            <p class="status-label mb-1">Question</p>
+                            <p class="status-value mb-0" id="question-count">1 / 8</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="status-card text-center" id="score-card">
+                            <p class="status-label mb-1">Score</p>
+                            <p class="status-value mb-0" id="score-value">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROGRESS BAR -->
+            <div id="progress-wrapper" class="progress-wrapper mb-4">
+                <div class="progress game-progress">
+                    <div id="progress-bar" class="progress-bar game-progress-bar" role="progressbar"
+                        style="width: 12.5%;" aria-valuenow="12.5" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVE GAME PANEL -->
+            <div id="active-game-panel" class="active-game-panel">
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- CLUE / QUESTION PANEL -->
+                    <div class="col-12 col-lg-4">
+                        <div id="clue-card" class="card clue-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="clue-header mb-3">
+                                    <h2 class="clue-title h5 fw-bold mb-0">Description</h2>
                                 </div>
-                            </div>
 
-                            <div class="col-6 col-md-3">
-                                <div class="status-card text-center" id="difficulty-card">
-                                    <p class="status-label mb-1">Difficulty</p>
-                                    <p class="status-value mb-0" id="difficulty-value">Easy</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-3">
-                                <div class="status-card text-center" id="question-progress-card">
-                                    <p class="status-label mb-1">Question</p>
-                                    <p class="status-value mb-0" id="question-count">1 / 8</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-3">
-                                <div class="status-card text-center" id="score-card">
-                                    <p class="status-label mb-1">Score</p>
-                                    <p class="status-value mb-0" id="score-value">0</p>
+                                <div id="clue-content" class="clue-content flex-grow-1">
+                                    <p id="clue-text" class="clue-text mb-0">
+                                        I have an incredibly long neck and a blue tongue that helps me reach juicy
+                                        leaves at the very top of trees! Who am I?
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- PROGRESS BAR -->
-                    <div id="progress-wrapper" class="progress-wrapper mb-4">
-                        <div class="progress game-progress">
-                            <div id="progress-bar" class="progress-bar game-progress-bar" role="progressbar"
-                                style="width: 12.5%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <!-- ACTIVE GAME PANEL -->
-                    <div id="active-game-panel" class="active-game-panel">
-                        <div class="row g-4 align-items-stretch">
-                            <!-- CLUE / QUESTION PANEL -->
-                            <div class="col-12 col-lg-4">
-                                <div id="clue-card" class="card clue-card h-100">
-                                    <div class="card-body d-flex flex-column">
-                                        <div class="clue-header mb-3">
-                                            <h2 class="clue-title h5 fw-bold mb-0">Description</h2>
-                                        </div>
 
-                                        <div id="clue-content" class="clue-content flex-grow-1">
-                                            <p id="clue-text" class="clue-text mb-0">
-                                                I have an incredibly long neck and a blue tongue that helps me reach
-                                                juicy
-                                                leaves at the very top of trees! Who am I?
-                                            </p>
-                                        </div>
+                    <!-- ANSWER AREA -->
+                    <div class="col-12 col-lg-8">
+                        <div id="answer-panel" class="card answer-panel h-100">
+                            <div class="card-body">
+
+                                <div class="answer-panel-header text-center mb-4">
+                                    <h2 class="answer-panel-title h5 fw-bold mb-0">Which animal is this?</h2>
+                                </div>
+
+                                <!-- ANSWER GRID -->
+                                <div id="answer-grid" class="row g-3">
+
+                                    <!-- ANSWER CARD 1 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-1" value="Giraffe">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-1">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-giraffe.png" alt="Giraffe"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Giraffe</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <!-- ANSWER CARD 2 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-2" value="Elephant">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-2">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-elephant.png" alt="Elephant"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Elephant</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <!-- ANSWER CARD 3 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-3" value="Sloth">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-3">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-sloth.png" alt="Sloth"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Sloth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <!-- ANSWER CARD 4 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-4" value="Porcupine">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-4">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-porcupine.png" alt="Porcupine"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Porcupine</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <!-- ANSWER CARD 5 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-5" value="Camel">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-5">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-camel.png" alt="Camel"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Camel</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <!-- ANSWER CARD 6 -->
+                                    <div class="col-6 col-md-4">
+                                        <input class="visually-hidden answer-input" type="radio" name="animal-answer"
+                                            id="answer-option-6" value="Hippo">
+                                        <label class="card answer-card h-100 text-center answer-option-label"
+                                            for="answer-option-6">
+                                            <span class="answer-image-wrapper d-block">
+                                                <img src="assets/images/land-civet.png" alt="Civet"
+                                                    class="answer-image img-fluid">
+                                            </span>
+                                            <span class="card-body py-2 d-block">
+                                                <span class="answer-name d-block">Civet</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <!-- FEEDBACK AREA -->
+                                <div id="feedback-area" class="feedback-area mt-4">
+                                    <div id="feedback-message" class="feedback-message d-none" role="alert"
+                                        aria-live="polite">
+                                        Correct!
                                     </div>
                                 </div>
-                            </div>
-                            <!-- ANSWER AREA -->
-                            <div class="col-12 col-lg-8">
-                                <div id="answer-panel" class="card answer-panel h-100">
-                                    <div class="card-body">
 
-                                        <div class="answer-panel-header text-center mb-4">
-                                            <h2 class="answer-panel-title h5 fw-bold mb-0">Which animal is this?</h2>
-                                        </div>
+                                <!-- GAME ACTIONS -->
+                                <div id="game-actions"
+                                    class="game-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
+                                    <button id="submit-btn" class="btn game-submit-btn px-4 py-2" type="button">
+                                        Submit Answer
+                                    </button>
 
-                                        <!-- ANSWER GRID -->
-                                        <div id="answer-grid" class="row g-3">
-
-                                            <!-- ANSWER CARD 1 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Giraffe" id="answer-option-1">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-giraffe.png" alt="Giraffe"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Giraffe</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <!-- ANSWER CARD 2 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Elephant" id="answer-option-2">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-elephant.png" alt="Elephant"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Elephant</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <!-- ANSWER CARD 3 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Sloth" id="answer-option-3">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-sloth.png" alt="Sloth"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Sloth</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <!-- ANSWER CARD 4 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Porcupine" id="answer-option-4">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-porcupine.png" alt="Porcupine"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Porcupine</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <!-- ANSWER CARD 5 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Camel" id="answer-option-5">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-camel.png" alt="Camel"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Camel</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <!-- ANSWER CARD 6 -->
-                                            <div class="col-6 col-md-4">
-                                                <button type="button" class="answer-option-btn w-100"
-                                                    data-answer="Civet" id="answer-option-6">
-                                                    <div class="card answer-card h-100 text-center">
-                                                        <div class="answer-image-wrapper">
-                                                            <img src="assets/images/land-civet.png" alt="Civet"
-                                                                class="answer-image img-fluid" />
-                                                        </div>
-                                                        <div class="card-body py-2">
-                                                            <p class="answer-name mb-0">Civet</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                            <!-- FEEDBACK AREA -->
-                                            <div id="feedback-area" class="feedback-area mt-4">
-                                                <div id="feedback-message" class="feedback-message d-none" role="alert"
-                                                    aria-live="polite">
-                                                    Correct!
-                                                </div>
-                                            </div>
-                                            <!-- GAME ACTIONS -->
-                                            <div id="game-actions"
-                                                class="game-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
-                                                <button id="submit-btn" class="btn game-submit-btn px-4 py-2"
-                                                    type="button">
-                                                    Submit Answer
-                                                </button>
-
-                                                <button id="next-btn" class="btn game-next-btn px-4 py-2 d-none"
-                                                    type="button">
-                                                    Next Question
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <button id="next-btn" class="btn game-next-btn px-4 py-2 d-none" type="button">
+                                        Next Question
+                                    </button>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- ROUND COMPLETE PANEL -->
-                        <div id="round-complete-panel" class="round-complete-panel d-none mt-5">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-8">
-                                    <div class="card complete-card text-center">
-                                        <div class="card-body p-4 p-md-5">
 
-                                            <div class="complete-icon-wrapper mb-3">
-                                                <div class="trophy-circle" id="trophy-circle">🏆</div>
-                                            </div>
-
-                                            <h2 id="complete-title" class="complete-title fw-bold mb-2">Round Complete!
-                                            </h2>
-                                            <p id="complete-text" class="complete-text mb-4">
-                                                Great job! You’ve finished this set.
-                                            </p>
-
-                                            <div class="row g-3 justify-content-center mb-4">
-                                                <div class="col-12 col-sm-6">
-                                                    <div id="final-score-box" class="summary-box">
-                                                        <p class="summary-label mb-1">Your Score</p>
-                                                        <p class="summary-value mb-0" id="final-score">65</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-sm-6">
-                                                    <div id="final-correct-box" class="summary-box">
-                                                        <p class="summary-label mb-1">Correct Answers</p>
-                                                        <p class="summary-value mb-0" id="final-correct">6 / 8</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div
-                                                class="complete-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
-                                                <button id="play-again-btn" class="btn complete-primary-btn px-4 py-2"
-                                                    type="button">
-                                                    Play Again
-                                                </button>
-
-                                                <button id="choose-set-btn" class="btn complete-secondary-btn px-4 py-2"
-                                                    type="button">
-                                                    Choose Another Set
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-            </section>            
-        </main>
+
+                </div>
+            </div>
+
+            <!-- ROUND COMPLETE PANEL -->
+            <div id="round-complete-panel" class="round-complete-panel d-none mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="card complete-card text-center">
+                            <div class="card-body p-4 p-md-5">
+
+                                <div class="complete-icon-wrapper mb-3">
+                                    <div class="trophy-circle" id="trophy-circle">🏆</div>
+                                </div>
+
+                                <h2 id="complete-title" class="complete-title fw-bold mb-2">Round Complete!</h2>
+                                <p id="complete-text" class="complete-text mb-4">
+                                    Great job! You’ve finished this set.
+                                </p>
+
+                                <div class="row g-3 justify-content-center mb-4">
+                                    <div class="col-12 col-sm-6">
+                                        <div id="final-score-box" class="summary-box">
+                                            <p class="summary-label mb-1">Your Score</p>
+                                            <p class="summary-value mb-0" id="final-score">65</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-6">
+                                        <div id="final-correct-box" class="summary-box">
+                                            <p class="summary-label mb-1">Correct Answers</p>
+                                            <p class="summary-value mb-0" id="final-correct">6 / 8</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="complete-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
+                                    <button id="play-again-btn" class="btn complete-primary-btn px-4 py-2"
+                                        type="button">
+                                        Play Again
+                                    </button>
+
+                                    <button id="choose-set-btn" class="btn complete-secondary-btn px-4 py-2"
+                                        type="button">
+                                        Choose Another Set
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 
 </html>
