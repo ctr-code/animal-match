@@ -75,6 +75,124 @@
                                 style="width: 12.5%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
+                    <!-- ACTIVE GAME PANEL -->
+                    <div id="active-game-panel" class="active-game-panel">
+                        <div class="row g-4 align-items-stretch">
+                            <!-- CLUE / QUESTION PANEL -->
+                            <div class="col-12 col-lg-4">
+                                <div id="clue-card" class="card clue-card h-100">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="clue-header mb-3">
+                                            <h2 class="clue-title h5 fw-bold mb-0">Description</h2>
+                                        </div>
+
+                                        <div id="clue-content" class="clue-content flex-grow-1">
+                                            <p id="clue-text" class="clue-text mb-0">
+                                                I have an incredibly long neck and a blue tongue that helps me reach
+                                                juicy
+                                                leaves at the very top of trees! Who am I?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ANSWER AREA -->
+<div class="col-12 col-lg-8">
+    <div id="answer-panel" class="card answer-panel h-100">
+        <div class="card-body">
+
+            <div class="answer-panel-header text-center mb-4">
+                <h2 class="answer-panel-title h5 fw-bold mb-0">Which animal is this?</h2>
+            </div>
+
+            <!-- ANSWER GRID -->
+            <div id="answer-grid" class="row g-3">
+
+                <!-- ANSWER CARD 1 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Giraffe" id="answer-option-1">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/giraffe.jpg" alt="Giraffe" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Giraffe</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- ANSWER CARD 2 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Elephant" id="answer-option-2">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/elephant.jpg" alt="Elephant" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Elephant</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- ANSWER CARD 3 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Sloth" id="answer-option-3">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/sloth.jpg" alt="Sloth" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Sloth</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- ANSWER CARD 4 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Porcupine" id="answer-option-4">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/porcupine.jpg" alt="Porcupine" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Porcupine</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- ANSWER CARD 5 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Camel" id="answer-option-5">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/camel.jpg" alt="Camel" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Camel</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- ANSWER CARD 6 -->
+                <div class="col-6 col-md-4">
+                    <button type="button" class="answer-option-btn w-100" data-answer="Hippo" id="answer-option-6">
+                        <div class="card answer-card h-100 text-center">
+                            <div class="answer-image-wrapper">
+                                <img src="images/land/hippo.jpg" alt="Hippo" class="answer-image img-fluid" />
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="answer-name mb-0">Hippo</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
         </main>
 
 </html>
