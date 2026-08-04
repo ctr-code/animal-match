@@ -1,3 +1,13 @@
-body {
-    color: #333;
+:root {
+    --bg: #FFF7E6;
+    --panel: #BDE0FE;
+    --primary: #FFD166;
+    --accent: #FB8500;
+    --success: #95D5B2;
+    --text: #2B2D42;
+    --muted: #6C757D;
+    --error: #E76F51;
+    --white: #FFFFFF;
+    --border: #E9D8B4;
 }
+
