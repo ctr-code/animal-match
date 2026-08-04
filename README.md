@@ -2,6 +2,26 @@
 
 A game of matching animal descriptions to pictures.
 
+---
+
+## Table of Contents
+* [Project Setup](#project-setup)
+* [Design Brief](#design-brief)
+* [Design & Planning](#design--planning)
+  * [User Stories](#user-stories)
+  * [Wireframe](#wireframe)
+  * [Typography](#typography)
+  * [Colour Scheme](#colour-scheme)
+* [Features](#features)
+* [Copilot AI Assistance](#copilot-ai-assistance)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credit and Thanks](#credit-and-thanks)
+
+---
+
 ## Project Setup
 
 1. In github accept your invitation to collaborate.  There should be a banner inviting you to.
@@ -26,8 +46,21 @@ Steps 1 & 2 | Step 3
 
 9. Use `git pull origin main` to retrieve other people's changes and merge them into your code.
 
+---
 
-## User Stories
+## Design Brief
+
+### External User’s Goal
+The user wants an intuitive, educational, and engaging game to test their knowledge of animals by matching descriptions to pictures.
+
+### Site Owner’s Goal
+The site owner’s goal is to build an interactive single-page game that allows users to select themed animal sets, guess animals based on brief descriptions, and track their score across mobile and desktop devices.
+
+---
+
+## Design & Planning
+
+### User Stories
 
 - As a player, I want to choose from several animal sets such as Ocean, Sea and Air animals, so that I can play with different themes.
 - As a player, I want to see a list of available animal sets before starting, so that I can select one that interests me.
@@ -44,9 +77,81 @@ Steps 1 & 2 | Step 3
 - As a player, I want the game to work well on a desktop and mobile screen, so that I can play in different environments.
 - As a player, I want to see a simple start screen and game over or completion screen, so that I know when the experience begins and ends.
 
-
-## Wireframe
+### Wireframe
 
 The initial UI wireframe is shown below and is the primary design reference during development.
 
 ![Animal Match Wireframe](docs/wireframe.png)
+
+### Typography
+* **Headers & Body Text:** [Font selections to be updated]
+
+### Colour Scheme
+
+Below are the colour palettes provided by Kieron for the Animal Match project:
+
+![Animal Match Colour Palette 1](docs/palette-1.png)
+![Animal Match Colour Palette 2](docs/palette-2.png)
+
+---
+
+## Features
+
+### Planned Features
+* **Theme Selection:** Select from themed animal categories (e.g., Air, Sea, Land).
+* **Interactive Guessing Game:** Read animal descriptions and click matching images.
+* **Instant Feedback & Score Keeping:** View real-time score updates and immediate correct/incorrect feedback.
+* **Completion Screen:** Option to replay or restart sets upon completion.
+
+---
+
+## Copilot AI Assistance
+* [Record details of GitHub Copilot prompts, suggestions, and fixes here]
+
+---
+
+## Technologies Used
+
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **GitHub** for repository management and hosting
+
+---
+
+## Testing
+
+### Manual Testing
+| User Story | Test | Result |
+| :--- | :--- | :---: |
+| 1 | Check that animal sets are listed and selectable | Pending |
+| 2 | Check that description matches image choices | Pending |
+| 3 | Check that instant feedback and score update works | Pending |
+
+---
+
+## Bugs
+* [Document any bugs encountered and their fixes here]
+
+---
+
+## Deployment
+
+### Forking & Cloning
+1. Navigate to the GitHub repository.
+2. Click **Fork** to create a copy under your account.
+3. Clone locally using `git clone <your-fork-url>`.
+
+### GitHub Pages Deployment
+1. Go to repository **Settings**.
+2. Select **Pages** from the left navigation.
+3. Set the deployment branch to `main` (or `master`) and click **Save**.
+
+---
+
+## Credit and Thanks
+
+* **Code Institute** and its tutors for teaching, support, and project guidance.
+* **West Midlands Combined Authority** for funding the course.
+* **Tim Berners-Lee et al.** for creating the web.
+* **GitHub** for repository hosting and GitHub Pages.
