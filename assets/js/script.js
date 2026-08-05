@@ -449,7 +449,7 @@ const questions = {
             {
                 "id": 11,
                 "question": "My teeth are naturally orange because they contain iron that makes them incredibly strong. Who am I?",
-                "options": [land_beaver, land_wombat, land_lynx, land_koala, land_meerkat, land_anteater],
+                "options": [land_beaver, land_sloth, land_lynx, land_koala, land_meerkat, land_anteater],
                 "animalName": land_beaver
             },
             {
