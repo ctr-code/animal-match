@@ -918,9 +918,17 @@ function initialiseListeners(parent) {
     document.getElementById("restart-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
     document.querySelector("nav button").addEventListener("click",
-        () => { document.getElementById("instructions-modal").showModal() })
+        () => { openInstructions(); })
     document.getElementById("close-instructions-btn").addEventListener("click",
         () => { closeInstructions(); });
+}
+
+function openInstructions() {
+    const modal = document.getElementById("instructions-modal");
+    // It will be opened automatically in modern browsers
+    if (!modal.open) {
+        modal.showModal();
+    }
 }
 
 function closeInstructions() {
