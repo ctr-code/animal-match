@@ -920,7 +920,15 @@ function initialiseListeners(parent) {
     document.querySelector("nav button").addEventListener("click",
         () => { document.getElementById("instructions-modal").showModal() })
     document.getElementById("close-instructions-btn").addEventListener("click",
-        () => { document.getElementById("instructions-modal").close() });
+        () => { closeInstructions(); });
+}
+
+function closeInstructions() {
+    const modal = document.getElementById("instructions-modal");
+    // It will be closed automatically in modern browsers
+    if (modal.open) {
+        modal.close();
+    }
 }
 
 function clickTheme(e) {
