@@ -916,7 +916,7 @@ function initialiseListeners(parent) {
     document.getElementById("choose-set-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
     document.getElementById("restart-btn").addEventListener("click",
-        () => { startGame(currentTheme); });
+        () => { showSection("difficulty-selection"); });
     document.querySelector("nav button").addEventListener("click",
         () => { document.getElementById("instructions-modal").showModal() })
     document.getElementById("close-instructions-btn").addEventListener("click",
