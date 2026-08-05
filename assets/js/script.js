@@ -917,23 +917,23 @@ function initialiseListeners(parent) {
         () => { showSection("difficulty-selection"); });
     document.getElementById("restart-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
-    document.querySelector("nav button").addEventListener("click",
-        () => { openInstructions(); })
-    document.getElementById("close-instructions-btn").addEventListener("click",
-        () => { closeInstructions(); });
+    document.querySelector("nav button").addEventListener("click", openInstructions);
+    document.getElementById("close-instructions-btn").addEventListener("click", closeInstructions);
 }
 
-function openInstructions() {
+function openInstructions(e) {
+    e.preventDefault();
     const modal = document.getElementById("instructions-modal");
-    // It will be opened automatically in modern browsers
+    // It may be opened automatically in modern browsers
     if (!modal.open) {
         modal.showModal();
     }
 }
 
-function closeInstructions() {
+function closeInstructions(e) {
+    e.preventDefault();
     const modal = document.getElementById("instructions-modal");
-    // It will be closed automatically in modern browsers
+    // It may be closed automatically in modern browsers
     if (modal.open) {
         modal.close();
     }
