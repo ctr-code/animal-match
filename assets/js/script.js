@@ -824,6 +824,10 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let currentScore;
 
+// Sound
+const disappointment = new Audio("assets/audio/universfield-crowd-disappointment-reaction-352718.mp3");
+const applause = new Audio("assets/audio/roesisch-applause-01-253125.mp3");
+
 /**
  *
  * @param {*} bound - The maximum return value + 1
@@ -963,12 +967,14 @@ function answerClick(e) {
 }
 
 function wrongAnswer(button) {
+    disappointment.play();
     showFeedback(button, "answer-incorrect");
 }
 
 function correctAnswer(button) {
     currentScore++;
     document.getElementById("score-value").textContent = currentScore;
+    applause.play();
     showFeedback(button, "answer-correct");
 }
 
