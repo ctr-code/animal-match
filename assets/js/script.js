@@ -836,8 +836,9 @@ function initialiseListeners(parent) {
     for (const theme of themes) {
         theme.addEventListener("click", clickTheme);
     }
-    document.getElementById("play-again-btn").addEventListener("click", e => { startGame(currentTheme); });
-    document.getElementById("choose-set-btn").addEventListener("click", e => { showSection("difficulty-selection"); });
+    document.getElementById("play-again-btn").addEventListener("click", () => { startGame(currentTheme); });
+    document.getElementById("choose-set-btn").addEventListener("click", () => { showSection("difficulty-selection"); });
+    document.getElementById("restart-btn").addEventListener("click", () => { startGame(currentTheme); });
 }
 
 function clickTheme(e) {
