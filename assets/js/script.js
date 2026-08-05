@@ -1,3 +1,4 @@
+/* jshint esversion:6 */
 
 // These correspond to the image file names
 const air_albatross = "air-albatross";
@@ -761,47 +762,49 @@ const questions = {
                 "animalName": air_woodpecker
             }
         ]
+    ],
+    // Bonus questions
+    bonus: [
+        [
+            {
+                "id": 1,
+                "question": "I can sleep while flying for hours over the open ocean, gliding thousands of miles without landing. Who am I?",
+                "options": [air_albatross, air_swift, air_bald_eagle, land_camel, ocean_manta_ray, land_koala],
+                "animalName": air_albatross
+            },
+            {
+                "id": 2,
+                "question": "My bite is so powerful it can crush bones and split open frozen carcasses, thanks to reinforced jaw muscles. Who am I?",
+                "options": [land_lynx, land_civet, land_meerkat, air_peregrine_falcon, ocean_orca, land_porcupine],
+                "animalName": land_lynx
+            },
+            {
+                "id": 3,
+                "question": "I can change the colour and pattern of my skin in less than a second, even mimicking moving stripes and ripples. Who am I?",
+                "options": [ocean_cuttlefish, ocean_clownfish, ocean_manta_ray, land_civet, air_kestrel, land_sloth],
+                "animalName": ocean_cuttlefish
+            },
+            {
+                "id": 4,
+                "question": "I can rotate my stomach inside out to clean it, then pull it back in again without injury. Who am I?",
+                "options": [ocean_sea_urchin, ocean_starfish, ocean_manta_ray, land_porcupine, air_stork, land_wombat],
+                "animalName": ocean_sea_urchin
+            },
+            {
+                "id": 5,
+                "question": "I can squeeze my entire body through a hole the size of a coin because I have no hard shell or bones. Who am I?",
+                "options": [ocean_blob_fish, ocean_cuttlefish, ocean_coconut_crab, land_meerkat, air_swift, land_koala],
+                "animalName": ocean_blob_fish
+            },
+            {
+                "id": 6,
+                "question": "A famous luxury perfume — including the original Chanel No. 5 — once relied on a naturally produced scent from me, valued for its warm, musky sweetness. Who am I?",
+                "options": [land_civet, land_meerkat, land_koala, air_pigeon, land_porcupine, air_bumblebee],
+                "animalName": land_civet
+            }
+        ]
     ]
 };
-
-const bonusQuestions = [
-    {
-        "id": 1,
-        "question": "I can sleep while flying for hours over the open ocean, gliding thousands of miles without landing. Who am I?",
-        "options": [air_albatross, air_swift, air_bald_eagle, land_camel, ocean_manta_ray, land_koala],
-        "animalName": air_albatross
-    },
-    {
-        "id": 2,
-        "question": "My bite is so powerful it can crush bones and split open frozen carcasses, thanks to reinforced jaw muscles. Who am I?",
-        "options": [land_lynx, land_civet, land_meerkat, air_peregrine_falcon, ocean_orca, land_porcupine],
-        "animalName": land_lynx
-    },
-    {
-        "id": 3,
-        "question": "I can change the colour and pattern of my skin in less than a second, even mimicking moving stripes and ripples. Who am I?",
-        "options": [ocean_cuttlefish, ocean_clownfish, ocean_manta_ray, land_civet, air_kestrel, land_sloth],
-        "animalName": ocean_cuttlefish
-    },
-    {
-        "id": 4,
-        "question": "I can rotate my stomach inside out to clean it, then pull it back in again without injury. Who am I?",
-        "options": [ocean_sea_urchin, ocean_starfish, ocean_manta_ray, land_porcupine, air_stork, land_wombat],
-        "animalName": ocean_sea_urchin
-    },
-    {
-        "id": 5,
-        "question": "I can squeeze my entire body through a hole the size of a coin because I have no hard shell or bones. Who am I?",
-        "options": [ocean_blob_fish, ocean_cuttlefish, ocean_coconut_crab, land_meerkat, air_swift, land_koala],
-        "animalName": ocean_blob_fish
-    },
-    {
-        "id": 6,
-        "question": "A famous luxury perfume — including the original Chanel No. 5 — once relied on a naturally produced scent from me, valued for its warm, musky sweetness. Who am I?",
-        "options": [land_civet, land_meerkat, land_koala, air_pigeon, land_porcupine, air_bumblebee],
-        "animalName": land_civet
-    }
-];
 
 const themeNameMap = new Map([
     ["sea", "Sea"],
@@ -909,7 +912,7 @@ function initialiseListeners(parent) {
     }
     const difficultyButtons = document.querySelectorAll("#difficulty-selection button");
     for (const button of difficultyButtons) {
-        button.addEventListener("click", clickDifficulty)
+        button.addEventListener("click", clickDifficulty);
     }
     const themes = document.querySelectorAll(".theme-card");
     for (const theme of themes) {
