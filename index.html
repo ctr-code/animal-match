@@ -349,6 +349,29 @@
             </div>
 
         </section>
+
+        <!-- INSTRUCTIONS MODAL -->
+        <div id="instructions-modal" class="instructions-modal d-none" role="dialog" aria-modal="true"
+            aria-labelledby="instructions-title" aria-describedby="instructions-text">
+            <div class="instructions-backdrop"></div>
+            <div class="instructions-card card text-center">
+                <div class="card-body p-4 p-md-5">
+                    <h2 id="instructions-title" class="instructions-title mb-3">How to Play</h2>
+                    <p id="instructions-text" class="instructions-text mb-4">
+                        Read the clue, pick the animal that matches, and press Submit Answer. If you get it wrong,
+                        try again and keep an eye on your score.
+                    </p>
+                    <button id="close-instructions-btn" class="btn complete-primary-btn px-4 py-2" type="button">
+                        Let’s Play
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- WRONG ANSWER CROSS -->
+        <div id="wrong-answer-overlay" class="wrong-answer-overlay d-none" aria-hidden="true">
+            <div id="wrong-answer-cross" class="wrong-answer-cross">✕</div>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
