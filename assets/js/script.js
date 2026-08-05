@@ -970,14 +970,12 @@ function answerClick(e) {
 }
 
 function wrongAnswer(button) {
-    disappointment.play();
     showFeedback(button, "answer-incorrect");
 }
 
 function correctAnswer(button) {
     currentScore++;
     document.getElementById("score-value").textContent = currentScore;
-    applause.play();
     showFeedback(button, "answer-correct");
 }
 
@@ -1006,6 +1004,12 @@ function nextQuestion() {
 }
 
 function gameOver() {
+    if (currentScore === currentQuestions.length) {
+        applause.play();
+    } else {
+        disappointment.play();
+    }
+
     document.getElementById("final-score").textContent = `${currentScore * 10}`;
     document.getElementById("final-correct").textContent = `${currentScore} / ${currentQuestions.length}`;
     showSection("round-complete-section");
