@@ -818,8 +818,11 @@ function displayQuestion(parent, question) {
         const creature = options[i];
         button.dataset.answer = creature;
         const url = `./assets/images/${creature.replace("-", "/")}.webp`;
-        button.querySelector("img").src = url;
-        button.querySelector(".answer-name").textContent = animalNameMap.get(creature);
+        const niceName = animalNameMap.get(creature);
+        const img = button.querySelector("img");
+        img.src = url;
+        img.alt = niceName;
+        button.querySelector(".answer-name").textContent = niceName;
     }
 }
 
