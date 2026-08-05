@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Henny+Penny&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Henny+Penny&display=swap");
 
 :root {
   --bg: #f8f1cf;
@@ -11,7 +11,7 @@
   --text: #20311f;
   --muted: #5d6f57;
   --error: #d95c4d;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --border: rgba(32, 49, 31, 0.12);
   --shadow: 0 22px 48px rgba(32, 49, 31, 0.16);
   --shadow-soft: 0 10px 22px rgba(32, 49, 31, 0.1);
@@ -31,7 +31,12 @@ body.app-bg {
   font-family: "Caveat", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(180deg, rgba(11, 32, 22, 0.22), rgba(255, 241, 199, 0.08) 26%, rgba(255, 255, 255, 0.02) 100%),
+    linear-gradient(
+      180deg,
+      rgba(11, 32, 22, 0.22),
+      rgba(255, 241, 199, 0.08) 26%,
+      rgba(255, 255, 255, 0.02) 100%
+    ),
     url("../images/bg-image.png");
 
   background-size: cover;
@@ -46,16 +51,34 @@ body.app-bg::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 20% 10%, rgba(255, 214, 87, 0.2), transparent 28%),
-    radial-gradient(circle at 80% 14%, rgba(76, 183, 200, 0.16), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(239, 125, 50, 0.12), transparent 30%),
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 214, 87, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 14%,
+      rgba(76, 183, 200, 0.16),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(239, 125, 50, 0.12),
+      transparent 30%
+    ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
   mix-blend-mode: normal;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .container {
   position: relative;
   z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 0.4rem;
 }
 
 .app-navbar {
@@ -63,12 +86,9 @@ body.app-bg::before {
   min-height: 210px;
   z-index: 2;
   display: flex;
-  align-items: center;
-  padding: 0; /* keeps navbar height balanced */
-  background:
-    linear-gradient(180deg, rgba(8, 26, 18, 0.06), rgba(8, 26, 18, 0.18)),
-    url("../images/navbar-bg.png") center/cover no-repeat;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.16);
+  align-items: flex-start;
+  justify-content: space-between;
+  background: url("../images/navbar-bg.png") center/cover no-repeat;
 }
 
 /* Title styling */
@@ -79,7 +99,7 @@ body.app-bg::before {
   letter-spacing: 0.03em;
   text-decoration: none;
   margin-left: 1rem;
-  text-shadow: 0 2px 10px rgba(17, 38, 26, 0.42);
+  text-shadow: 2px 4px 2px rgba(17, 38, 26, 0.85);
 }
 
 .app-title:hover,
@@ -100,7 +120,8 @@ body.app-bg::before {
   color: var(--accent);
   font-weight: 700;
   box-shadow: 0 12px 24px rgba(32, 49, 31, 0.12);
-  margin-right: 1rem; /* keeps spacing from edge */
+  margin-right: 1rem;
+  /* keeps spacing from edge */
   backdrop-filter: blur(10px);
 }
 
@@ -121,9 +142,21 @@ main.container {
   padding: clamp(1.1rem, 2vw, 1.75rem) clamp(1rem, 2vw, 1.5rem);
   border-radius: 1.75rem;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 246, 215, 0.88)),
-    radial-gradient(circle at top left, rgba(255, 214, 87, 0.34), transparent 46%),
-    radial-gradient(circle at bottom right, rgba(76, 183, 200, 0.18), transparent 38%);
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.84),
+      rgba(255, 246, 215, 0.88)
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 214, 87, 0.34),
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(76, 183, 200, 0.18),
+      transparent 38%
+    );
   border: 1px solid rgba(32, 49, 31, 0.08);
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
@@ -147,10 +180,11 @@ main.container {
 #set-selection h2,
 #difficulty-selection h2,
 #landing-stats h2 {
-  color: #263a24;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  color: #243047; /* deeper contrast */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
+/* Shared card styles */
 .theme-card,
 .stats-panel,
 .difficulty-btn,
@@ -159,34 +193,61 @@ main.container {
   border-radius: 1.5rem;
 }
 
+/* Panels + cards */
 .theme-card,
 .stats-panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 247, 230, 0.92));
-  border: 1px solid rgba(32, 49, 31, 0.08);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(8px);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 241, 0.99), rgba(255, 255, 255, 1)),
+    radial-gradient(circle at top, rgba(255, 214, 87, 0.16), transparent 46%);
+  border: 2px solid rgba(239, 125, 50, 0.4);
+  box-shadow:
+    0 14px 28px rgba(36, 48, 71, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  color: var(--accent);
 }
 
 .theme-card {
   position: relative;
   overflow: hidden;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .theme-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 214, 87, 0.12), transparent 34%);
+  inset: auto 0 0;
+  height: 0.45rem;
+  background: linear-gradient(
+    90deg,
+    var(--success),
+    var(--primary),
+    var(--accent),
+    var(--teal)
+  );
   pointer-events: none;
 }
 
 .theme-card:hover,
-.theme-card:focus-within,
-.theme-card.selected {
+.theme-card:focus-within {
   transform: translateY(-4px);
-  border-color: rgba(239, 125, 50, 0.32);
-  box-shadow: 0 18px 36px rgba(32, 49, 31, 0.14);
+  border-color: rgba(239, 125, 50, 0.55);
+  box-shadow:
+    0 18px 36px rgba(36, 48, 71, 0.18),
+    0 0 0 1px rgba(255, 209, 102, 0.28) inset;
+}
+
+.theme-card.selected {
+  border-color: rgba(239, 125, 50, 0.48);
+  box-shadow:
+    0 14px 28px rgba(36, 48, 71, 0.14),
+    inset 0 0 0 1px rgba(255, 209, 102, 0.18);
+}
+
+.theme-card .card-body,
+.theme-card .theme-meta,
+.theme-card .text-muted-custom,
+.theme-card h3 {
+  color: var(--accent);
 }
 
 .theme-image-placeholder {
@@ -197,12 +258,23 @@ main.container {
   place-items: center;
   border-radius: 50%;
   font-size: 2rem;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.55)),
-    linear-gradient(135deg, rgba(255, 214, 87, 0.55), rgba(135, 201, 111, 0.28));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 10px 18px rgba(32, 49, 31, 0.12);
-}
 
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.65)
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 209, 102, 0.75),
+      rgba(149, 213, 178, 0.45)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 10px 18px rgba(36, 48, 71, 0.16);
+}
 .theme-meta,
 .text-muted-custom,
 .stat-label {
@@ -216,7 +288,11 @@ main.container {
   font-weight: 700;
   padding: 0.8rem 1.4rem;
   box-shadow: 0 12px 22px rgba(32, 49, 31, 0.14);
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
 }
 
 .difficulty-btn {
@@ -230,7 +306,11 @@ main.container {
 .difficulty-btn:focus-visible,
 .difficulty-btn.active {
   color: var(--text);
-  background: linear-gradient(135deg, rgba(255, 212, 87, 0.95), rgba(255, 235, 166, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 212, 87, 0.95),
+    rgba(255, 235, 166, 0.95)
+  );
   border-color: rgba(239, 125, 50, 0.28);
   transform: translateY(-2px);
 }
@@ -260,7 +340,10 @@ main.container {
   position: absolute;
   inset: auto -10% -55% -10%;
   height: 70%;
-  background: radial-gradient(circle, rgba(76, 183, 200, 0.2), transparent 70%);
+  background:
+    radial-gradient(circle, rgba(239, 125, 50, 0.18), transparent 58%),
+    radial-gradient(circle at 30% 70%, rgba(255, 214, 87, 0.24), transparent 42%),
+    radial-gradient(circle at 78% 22%, rgba(76, 183, 200, 0.18), transparent 38%);
   pointer-events: none;
 }
 
@@ -295,7 +378,11 @@ main.container {
   margin-top: 1rem;
   padding: clamp(0.85rem, 1.5vw, 1.35rem);
   border-radius: 1.75rem;
-  background: linear-gradient(180deg, rgba(255, 250, 234, 0.78), rgba(243, 251, 226, 0.76));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 250, 234, 0.78),
+    rgba(243, 251, 226, 0.76)
+  );
   border: 1px solid rgba(32, 49, 31, 0.08);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
@@ -321,8 +408,16 @@ main.container {
   min-height: 100%;
   border: 1px solid rgba(32, 49, 31, 0.08);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 251, 239, 0.92)),
-    radial-gradient(circle at top right, rgba(135, 201, 111, 0.2), transparent 38%);
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 251, 239, 0.92)
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(135, 201, 111, 0.2),
+      transparent 38%
+    );
 }
 
 .status-label,
@@ -352,7 +447,12 @@ main.container {
 }
 
 .game-progress-bar {
-  background: linear-gradient(90deg, var(--success), var(--primary) 55%, var(--accent));
+  background: linear-gradient(
+    90deg,
+    var(--success),
+    var(--primary) 55%,
+    var(--accent)
+  );
   border-radius: inherit;
 }
 
@@ -374,8 +474,16 @@ main.container {
 
 .clue-card {
   background:
-    linear-gradient(180deg, rgba(217, 240, 169, 0.32), rgba(255, 255, 255, 0.9)),
-    radial-gradient(circle at top left, rgba(255, 214, 87, 0.18), transparent 45%);
+    linear-gradient(
+      180deg,
+      rgba(217, 240, 169, 0.32),
+      rgba(255, 255, 255, 0.9)
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 214, 87, 0.18),
+      transparent 45%
+    );
 }
 
 .clue-title,
@@ -400,8 +508,16 @@ main.container {
 
 .answer-panel {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(212, 243, 219, 0.24)),
-    radial-gradient(circle at 100% 0%, rgba(76, 183, 200, 0.12), transparent 28%);
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(212, 243, 219, 0.24)
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(76, 183, 200, 0.12),
+      transparent 28%
+    );
 }
 
 #answer-grid {
@@ -429,7 +545,10 @@ main.container {
   border: 2px solid transparent;
   border-radius: 1.25rem;
   overflow: hidden;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
   background:
     linear-gradient(180deg, rgba(255, 252, 241, 0.99), rgba(255, 255, 255, 1)),
     radial-gradient(circle at top, rgba(255, 214, 87, 0.16), transparent 46%);
@@ -440,7 +559,13 @@ main.container {
   position: absolute;
   inset: auto 0 0;
   height: 0.45rem;
-  background: linear-gradient(90deg, var(--success), var(--primary), var(--accent), var(--teal));
+  background: linear-gradient(
+    90deg,
+    var(--success),
+    var(--primary),
+    var(--accent),
+    var(--teal)
+  );
 }
 
 .answer-option-btn:hover .answer-card,
@@ -554,7 +679,11 @@ main.container {
 
 .complete-card {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 251, 226, 0.4)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(243, 251, 226, 0.4)
+    ),
     radial-gradient(circle at top, rgba(255, 214, 87, 0.14), transparent 34%);
 }
 
@@ -580,8 +709,16 @@ main.container {
   padding: 0.9rem 1rem;
   border: 1px solid rgba(32, 49, 31, 0.08);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 235, 0.96)),
-    radial-gradient(circle at right top, rgba(76, 183, 200, 0.12), transparent 35%);
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 250, 235, 0.96)
+    ),
+    radial-gradient(
+      circle at right top,
+      rgba(76, 183, 200, 0.12),
+      transparent 35%
+    );
 }
 
 .summary-value {
