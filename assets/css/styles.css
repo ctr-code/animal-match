@@ -484,24 +484,6 @@ main.container {
   color: #243622;
 }
 
-.feedback-area {
-  min-height: 2.75rem;
-}
-
-.feedback-message {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0.65rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(135, 201, 111, 0.24);
-  border: 1px solid rgba(135, 201, 111, 0.58);
-  color: #21543f;
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
 .game-actions,
 .complete-actions {
   display: flex;
