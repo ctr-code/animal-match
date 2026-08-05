@@ -130,6 +130,30 @@ const questions = {
                 "question": "In the deep ocean, I look like a normal fish. But when I am brought up to the surface, I turn into a pink, gooey, grumpy-looking blob! Who am I?",
                 "options": [ocean_blob_fish, ocean_cuttlefish, ocean_jellyfish, ocean_clownfish, ocean_starfish, ocean_coconut_crab],
                 "animalName": ocean_blob_fish
+            },
+            {
+                "id": 9,
+                "question": "I can change my colour and even my shape to blend into rocks and coral. I have eight arms and squirt ink when I get scared! Who am I?",
+                "options": [ocean_cuttlefish, ocean_manta_ray, ocean_orca, ocean_starfish, ocean_blob_fish, ocean_seahorse],
+                "animalName": ocean_cuttlefish
+            },
+            {
+                "id": 10,
+                "question": "I am a huge black-and-white hunter who lives in family pods. I’m actually a dolphin, and I’m known for my powerful leaps out of the water! Who am I?",
+                "options": [ocean_orca, ocean_great_white_shark, ocean_manta_ray, ocean_cuttlefish, ocean_beluga_whale, ocean_starfish],
+                "animalName": ocean_orca
+            },
+            {
+                "id": 11,
+                "question": "I glide gracefully through the ocean with wide, wing-like fins. I look like I’m flying underwater, and I love to eat tiny plankton. Who am I?",
+                "options": [ocean_manta_ray, ocean_orca, ocean_cuttlefish, ocean_jellyfish, ocean_seahorse, ocean_blob_fish],
+                "animalName": ocean_manta_ray
+            },
+            {
+                "id": 12,
+                "question": "I have five arms and can regrow them if one breaks off. I crawl slowly along the sea floor and come in lots of bright colours! Who am I?",
+                "options": [ocean_starfish, ocean_sea_urchin, ocean_jellyfish, ocean_coconut_crab, ocean_clownfish, ocean_manta_ray],
+                "animalName": ocean_starfish
             }
         ],
         // Medium questions
@@ -334,6 +358,30 @@ const questions = {
                 "question": "I have a very long, sticky tongue and a tube-shaped snout that is perfect for slurping up thousands of bugs a day! Who am I?",
                 "options": [land_civet, land_anteater, land_lynx, land_elephant, land_giraffe, land_meerkat],
                 "animalName": land_anteater
+            },
+            {
+                "id": 9,
+                "question": "I have a mask-like face, a long slender body, and I love to sneak through the forest at night searching for fruit and small animals. Who am I?",
+                "options": [land_civet, land_lynx, land_wombat, land_koala, land_beaver, land_meerkat],
+                "animalName": land_civet
+            },
+            {
+                "id": 10,
+                "question": "I spend most of my life in eucalyptus trees, sleeping for up to 20 hours a day and munching on leaves that other animals can't digest! Who am I?",
+                "options": [land_koala, land_wombat, land_sloth, land_civet, land_giraffe, land_anteater],
+                "animalName": land_koala
+            },
+            {
+                "id": 11,
+                "question": "I am a wild cat with short ears that have little black tufts on top. I move silently through snowy forests while hunting rabbits and birds. Who am I?",
+                "options": [land_lynx, land_beaver, land_meerkat, land_civet, land_koala, land_camel],
+                "animalName": land_lynx
+            },
+            {
+                "id": 12,
+                "question": "I am a chunky, strong digger with a round body and short legs. I make deep burrows underground and waddle around the Australian bush. Who am I?",
+                "options": [land_wombat, land_sloth, land_koala, land_beaver, land_lynx, land_civet],
+                "animalName": land_wombat
             }
         ],
         // Medium questions
@@ -537,6 +585,30 @@ const questions = {
                 "question": "I am a large, tall bird with very long legs and a big beak. I am famous for building massive stick nests on top of chimneys and poles! Who am I?",
                 "options": [air_kestrel, air_stork, air_woodpecker, air_hummingbird, air_bat, air_bumblebee],
                 "animalName": air_stork
+            },
+            {
+                "id": 9,
+                "question": "I hover in the air while hunting, flapping my wings rapidly as I search for mice below. I am a small falcon with sharp eyesight! Who am I?",
+                "options": [air_kestrel, air_pigeon, air_raven, air_swift, air_stork, air_bumblebee],
+                "animalName": air_kestrel
+            },
+            {
+                "id": 10,
+                "question": "I am a common city bird with a plump body and a soft cooing call. You can often see me pecking crumbs on the pavement! Who am I?",
+                "options": [air_pigeon, air_swift, air_raven, air_albatross, air_hummingbird, air_bat],
+                "animalName": air_pigeon
+            },
+            {
+                "id": 11,
+                "question": "I am a clever black bird known for my loud croaking voice. I can solve puzzles, use tools, and remember faces! Who am I?",
+                "options": [air_raven, air_peregrine_falcon, air_pigeon, air_kestrel, air_swift, air_woodpecker],
+                "animalName": air_raven
+            },
+            {
+                "id": 12,
+                "question": "I am one of the fastest birds in level flight! I spend most of my life in the air, zipping around with long, curved wings. Who am I?",
+                "options": [air_swift, air_raven, air_pigeon, air_kestrel, air_bald_eagle, air_bumblebee],
+                "animalName": air_swift
             }
         ],
         // Medium questions
