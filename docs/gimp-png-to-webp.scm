@@ -24,7 +24,21 @@
                      (image (car (gimp-file-load RUN-NONINTERACTIVE input-file input-file)))
                      (layer (car (gimp-image-get-active-layer image)))
                      (output-file (string-append (substring input-file 0 (- (string-length input-file) 4)) ".webp")))
-                (gimp-file-save RUN-NONINTERACTIVE image layer output-file output-file)
+                (file-webp-save RUN-NONINTERACTIVE image layer output-file output-file
+                    0  ; preset (default 0)
+                    0  ; lossless
+                    80 ; quality
+                    90 ; alpha-quality
+                    0  ; animation
+                    0  ; anim-loop
+                    0  ; minimum-size for animation      
+                    0  ; key-frame-distance
+                    0  ; iptc
+                    0  ; exif
+                    0  ; xmp
+                    0  ; delay for untimestamped animations
+                    0  ; force-delay
+                )
                 (gimp-image-delete image)
                 (loop (cdr files) (+ count 1))))))))
 
