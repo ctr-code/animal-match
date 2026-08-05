@@ -21,7 +21,7 @@
 
     <nav class="navbar navbar-expand-lg app-navbar py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold app-title" href="index.html">🐾 Animal Match</a>
+            <a class="navbar-brand fw-bold app-title" href="index.html">Animal Match</a>
             <div class="ms-auto">
                 <button class="btn btn-link help-link text-decoration-none" type="button">
                     How to Play
@@ -49,10 +49,10 @@
                 <button class="btn difficulty-btn" data-difficulty="hard" type="button">Hard</button>
             </div>
         </section>
-            
+
         <!-- LANDING SECTION: SET SELECTION -->
         <section class="mb-5" id="set-selection">
-            <h2 class="h3 fw-bold text-center mb-4">Select a Set</h2>
+            <h2 class="h3 fw-bold text-center mb-4">Pick where your critter quest begins — Land, Sea, or Air!</h2>
             <div class="row g-4 justify-content-center">
 
                 <div class="col-12 col-md-6 col-lg-4">
@@ -61,7 +61,6 @@
                             <div class="theme-image-placeholder mb-3">🦒</div>
                             <h3 class="h5 fw-bold mb-2">Land Animals</h3>
                             <p class="text-muted-custom mb-2">Giraffes, elephants, sloths and more.</p>
-                            <small class="theme-meta" id="land-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,6 @@
                             <div class="theme-image-placeholder mb-3">🐠</div>
                             <h3 class="h5 fw-bold mb-2">Sea Animals</h3>
                             <p class="text-muted-custom mb-2">Clownfish, sharks, whales and more.</p>
-                            <small class="theme-meta" id="sea-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -83,7 +81,6 @@
                             <div class="theme-image-placeholder mb-3">🦅</div>
                             <h3 class="h5 fw-bold mb-2">Air Animals</h3>
                             <p class="text-muted-custom mb-2">Falcons, hummingbirds, bats and more.</p>
-                            <small class="theme-meta" id="air-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -285,6 +282,17 @@
 
                                 </div>
 
+                                <div id="game-actions"
+                                    class="game-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
+                                    <button id="restart-btn" class="btn game-restart-btn px-4 py-2" type="button">
+                                        Start Over
+                                    </button>
+
+                                    <button id="next-btn" class="btn game-next-btn px-4 py-2 d-none" type="button">
+                                        Next Question
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -347,6 +355,12 @@
             </div>
 
         </section>
+
+        <footer class="container py-4 pb-5 text-center">
+            <p class="mb-0 text-muted-custom small">
+                Animal Match Game © 2026. <a class="text-decoration-none" href="index.html">Back to home</a>
+            </p>
+        </footer>
 
         <!-- INSTRUCTIONS MODAL -->
         <div id="instructions-modal" class="instructions-modal d-none" role="dialog" aria-modal="true"
