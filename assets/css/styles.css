@@ -37,7 +37,7 @@ body.app-bg {
       rgba(255, 241, 199, 0.08) 26%,
       rgba(255, 255, 255, 0.02) 100%
     ),
-    url("../images/bg-image.png");
+    url("../images/bg-image.webp");
 
   background-size: cover;
   background-position: center;
@@ -88,7 +88,7 @@ body.app-bg::before {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: url("../images/navbar-bg.png") center/cover no-repeat;
+  background: url("../images/navbar-bg.webp") center/cover no-repeat;
 }
 
 /* Title styling */
@@ -702,7 +702,7 @@ main.container {
   gap: 0.65rem;
 }
 
-.game-submit-btn,
+.game-restart-btn,
 .game-next-btn,
 .complete-primary-btn,
 .complete-secondary-btn {
@@ -715,23 +715,23 @@ main.container {
   box-shadow: var(--shadow-soft);
 }
 
-.game-submit-btn,
 .complete-primary-btn {
   color: var(--text);
   background: linear-gradient(135deg, var(--primary), #ffe29a 55%, #fff5c9);
 }
 
+.game-restart-btn,
 .game-next-btn,
 .complete-secondary-btn {
   color: var(--text);
   background: linear-gradient(135deg, var(--success), #d9f5ea);
 }
 
-.game-submit-btn:hover,
+.game-restart-btn:hover,
 .game-next-btn:hover,
 .complete-primary-btn:hover,
 .complete-secondary-btn:hover,
-.game-submit-btn:focus-visible,
+.game-restart-btn:focus-visible,
 .game-next-btn:focus-visible,
 .complete-primary-btn:focus-visible,
 .complete-secondary-btn:focus-visible {

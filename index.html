@@ -19,16 +19,21 @@
 
 <body class="app-bg">
 
+    <!-- How to Play -->
     <nav class="navbar navbar-expand-lg app-navbar py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold app-title" href="index.html">🐾 Animal Match</a>
-            <div class="ms-auto">
-                <button class="btn btn-link help-link text-decoration-none" type="button">
-                    How to Play
-                </button>
-            </div>
+    <div class="container">
+        <a class="navbar-brand fw-bold app-title" href="index.html">Animal Match</a>
+        <div class="ms-auto">
+            <button
+                class="btn btn-link help-link text-decoration-none"
+                type="button"
+                command="show-modal"
+                commandfor="instructions-modal">
+                How to Play
+            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main class="container py-4 py-md-5">
 
@@ -44,15 +49,15 @@
         <section class="mb-5 text-center" id="difficulty-selection">
             <h2 class="h4 fw-bold mb-3">Choose Difficulty</h2>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <button class="btn difficulty-btn active" data-difficulty="easy" type="button">Easy</button>
+                <button class="btn difficulty-btn" data-difficulty="easy" type="button">Easy</button>
                 <button class="btn difficulty-btn" data-difficulty="medium" type="button">Medium</button>
                 <button class="btn difficulty-btn" data-difficulty="hard" type="button">Hard</button>
             </div>
         </section>
-            
+
         <!-- LANDING SECTION: SET SELECTION -->
         <section class="mb-5" id="set-selection">
-            <h2 class="h3 fw-bold text-center mb-4">Select a Set</h2>
+            <h2 class="h3 fw-bold text-center mb-4">Pick where your critter quest begins — Land, Sea, or Air!</h2>
             <div class="row g-4 justify-content-center">
 
                 <div class="col-12 col-md-6 col-lg-4">
@@ -61,7 +66,6 @@
                             <div class="theme-image-placeholder mb-3">🦒</div>
                             <h3 class="h5 fw-bold mb-2">Land Animals</h3>
                             <p class="text-muted-custom mb-2">Giraffes, elephants, sloths and more.</p>
-                            <small class="theme-meta" id="land-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -72,7 +76,6 @@
                             <div class="theme-image-placeholder mb-3">🐠</div>
                             <h3 class="h5 fw-bold mb-2">Sea Animals</h3>
                             <p class="text-muted-custom mb-2">Clownfish, sharks, whales and more.</p>
-                            <small class="theme-meta" id="sea-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -83,7 +86,6 @@
                             <div class="theme-image-placeholder mb-3">🦅</div>
                             <h3 class="h5 fw-bold mb-2">Air Animals</h3>
                             <p class="text-muted-custom mb-2">Falcons, hummingbirds, bats and more.</p>
-                            <small class="theme-meta" id="air-count">12 Animals</small>
                         </div>
                     </div>
                 </div>
@@ -204,8 +206,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Giraffe" id="answer-option-1">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-giraffe.png" alt="Giraffe"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Giraffe" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Giraffe</span>
@@ -218,8 +220,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Elephant" id="answer-option-2">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-elephant.png" alt="Elephant"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Elephant" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Elephant</span>
@@ -232,8 +234,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Sloth" id="answer-option-3">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-sloth.png" alt="Sloth"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Sloth" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Sloth</span>
@@ -246,8 +248,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Porcupine" id="answer-option-4">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-porcupine.png" alt="Porcupine"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Porcupine" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Porcupine</span>
@@ -260,8 +262,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Camel" id="answer-option-5">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-camel.png" alt="Camel"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Camel" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Camel</span>
@@ -274,8 +276,8 @@
                                             class="answer-option-btn answer-card w-100 h-100 text-center"
                                             data-answer="Civet" id="answer-option-6">
                                             <span class="answer-image-wrapper d-block">
-                                                <img src="assets/images/land-civet.png" alt="Civet"
-                                                    class="answer-image img-fluid">
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%236b7280'%3EAnimal%3C/text%3E%3C/svg%3E"
+                                                    alt="Civet" class="answer-image img-fluid">
                                             </span>
                                             <span class="card-body d-block py-2">
                                                 <span class="answer-name">Civet</span>
@@ -283,6 +285,17 @@
                                         </button>
                                     </div>
 
+                                </div>
+
+                                <div id="game-actions"
+                                    class="game-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
+                                    <button id="restart-btn" class="btn game-restart-btn px-4 py-2" type="button">
+                                        Start Over
+                                    </button>
+
+                                    <button id="next-btn" class="btn game-next-btn px-4 py-2 d-none" type="button">
+                                        Next Question
+                                    </button>
                                 </div>
 
                             </div>
@@ -348,23 +361,32 @@
 
         </section>
 
+        <footer class="container py-4 pb-5 text-center">
+            <p class="mb-0 text-muted-custom small">
+                Animal Match Game © 2026. <a class="text-decoration-none" href="index.html">Back to home</a>
+            </p>
+        </footer>
+
         <!-- INSTRUCTIONS MODAL -->
-        <div id="instructions-modal" class="instructions-modal d-none" role="dialog" aria-modal="true"
-            aria-labelledby="instructions-title" aria-describedby="instructions-text">
-            <div class="instructions-backdrop"></div>
-            <div class="instructions-card card text-center">
-                <div class="card-body p-4 p-md-5">
-                    <h2 id="instructions-title" class="instructions-title mb-3">How to Play</h2>
-                    <p id="instructions-text" class="instructions-text mb-4">
-                        Read the clue, pick the animal that matches, and press Submit Answer. If you get it wrong,
-                        try again and keep an eye on your score.
-                    </p>
-                    <button id="close-instructions-btn" class="btn complete-primary-btn px-4 py-2" type="button">
-                        Let’s Play
-                    </button>
-                </div>
-            </div>
+        <dialog id="instructions-modal" aria-labelledby="instructions-title" aria-describedby="instructions-text">
+    <div class="instructions-card card text-center">
+        <div class="card-body p-4 p-md-5">
+            <h2 id="instructions-title" class="instructions-title mb-3">How to Play</h2>
+            <p id="instructions-text" class="instructions-text mb-4">
+                Read the clue, pick the animal that matches, and choose the correct answer. If you get it wrong,
+                try again and keep an eye on your score.
+            </p>
+            <button
+                id="close-instructions-btn"
+                class="btn complete-primary-btn px-4 py-2"
+                type="button"
+                command="close"
+                commandfor="instructions-modal">
+                Let’s Play
+            </button>
         </div>
+    </div>
+</dialog>
 
         <!-- WRONG ANSWER CROSS -->
         <div id="wrong-answer-overlay" class="wrong-answer-overlay d-none" aria-hidden="true">

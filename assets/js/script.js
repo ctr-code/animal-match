@@ -1,3 +1,4 @@
+/* jshint esversion:6 */
 
 // These correspond to the image file names
 const air_albatross = "air-albatross";
@@ -130,6 +131,30 @@ const questions = {
                 "question": "In the deep ocean, I look like a normal fish. But when I am brought up to the surface, I turn into a pink, gooey, grumpy-looking blob! Who am I?",
                 "options": [ocean_blob_fish, ocean_cuttlefish, ocean_jellyfish, ocean_clownfish, ocean_starfish, ocean_coconut_crab],
                 "animalName": ocean_blob_fish
+            },
+            {
+                "id": 9,
+                "question": "I can change my colour and even my shape to blend into rocks and coral. I have eight arms and squirt ink when I get scared! Who am I?",
+                "options": [ocean_cuttlefish, ocean_manta_ray, ocean_orca, ocean_starfish, ocean_blob_fish, ocean_seahorse],
+                "animalName": ocean_cuttlefish
+            },
+            {
+                "id": 10,
+                "question": "I am a huge black-and-white hunter who lives in family pods. I’m actually a dolphin, and I’m known for my powerful leaps out of the water! Who am I?",
+                "options": [ocean_orca, ocean_great_white_shark, ocean_manta_ray, ocean_cuttlefish, ocean_beluga_whale, ocean_starfish],
+                "animalName": ocean_orca
+            },
+            {
+                "id": 11,
+                "question": "I glide gracefully through the ocean with wide, wing-like fins. I look like I’m flying underwater, and I love to eat tiny plankton. Who am I?",
+                "options": [ocean_manta_ray, ocean_orca, ocean_cuttlefish, ocean_jellyfish, ocean_seahorse, ocean_blob_fish],
+                "animalName": ocean_manta_ray
+            },
+            {
+                "id": 12,
+                "question": "I have five arms and can regrow them if one breaks off. I crawl slowly along the sea floor and come in lots of bright colours! Who am I?",
+                "options": [ocean_starfish, ocean_sea_urchin, ocean_jellyfish, ocean_coconut_crab, ocean_clownfish, ocean_manta_ray],
+                "animalName": ocean_starfish
             }
         ],
         // Medium questions
@@ -334,6 +359,30 @@ const questions = {
                 "question": "I have a very long, sticky tongue and a tube-shaped snout that is perfect for slurping up thousands of bugs a day! Who am I?",
                 "options": [land_civet, land_anteater, land_lynx, land_elephant, land_giraffe, land_meerkat],
                 "animalName": land_anteater
+            },
+            {
+                "id": 9,
+                "question": "I have a mask-like face, a long slender body, and I love to sneak through the forest at night searching for fruit and small animals. Who am I?",
+                "options": [land_civet, land_lynx, land_wombat, land_koala, land_beaver, land_meerkat],
+                "animalName": land_civet
+            },
+            {
+                "id": 10,
+                "question": "I spend most of my life in eucalyptus trees, sleeping for up to 20 hours a day and munching on leaves that other animals can't digest! Who am I?",
+                "options": [land_koala, land_wombat, land_sloth, land_civet, land_giraffe, land_anteater],
+                "animalName": land_koala
+            },
+            {
+                "id": 11,
+                "question": "I am a wild cat with short ears that have little black tufts on top. I move silently through snowy forests while hunting rabbits and birds. Who am I?",
+                "options": [land_lynx, land_beaver, land_meerkat, land_civet, land_koala, land_camel],
+                "animalName": land_lynx
+            },
+            {
+                "id": 12,
+                "question": "I am a chunky, strong digger with a round body and short legs. I make deep burrows underground and waddle around the Australian bush. Who am I?",
+                "options": [land_wombat, land_sloth, land_koala, land_beaver, land_lynx, land_civet],
+                "animalName": land_wombat
             }
         ],
         // Medium questions
@@ -401,7 +450,7 @@ const questions = {
             {
                 "id": 11,
                 "question": "My teeth are naturally orange because they contain iron that makes them incredibly strong. Who am I?",
-                "options": [land_beaver, land_wombat, land_lynx, land_koala, land_meerkat, land_anteater],
+                "options": [land_beaver, land_sloth, land_lynx, land_koala, land_meerkat, land_anteater],
                 "animalName": land_beaver
             },
             {
@@ -537,6 +586,30 @@ const questions = {
                 "question": "I am a large, tall bird with very long legs and a big beak. I am famous for building massive stick nests on top of chimneys and poles! Who am I?",
                 "options": [air_kestrel, air_stork, air_woodpecker, air_hummingbird, air_bat, air_bumblebee],
                 "animalName": air_stork
+            },
+            {
+                "id": 9,
+                "question": "I hover in the air while hunting, flapping my wings rapidly as I search for mice below. I am a small falcon with sharp eyesight! Who am I?",
+                "options": [air_kestrel, air_pigeon, air_raven, air_swift, air_stork, air_bumblebee],
+                "animalName": air_kestrel
+            },
+            {
+                "id": 10,
+                "question": "I am a common city bird with a plump body and a soft cooing call. You can often see me pecking crumbs on the pavement! Who am I?",
+                "options": [air_pigeon, air_swift, air_raven, air_albatross, air_hummingbird, air_bat],
+                "animalName": air_pigeon
+            },
+            {
+                "id": 11,
+                "question": "I am a clever black bird known for my loud croaking voice. I can solve puzzles, use tools, and remember faces! Who am I?",
+                "options": [air_raven, air_peregrine_falcon, air_pigeon, air_kestrel, air_swift, air_woodpecker],
+                "animalName": air_raven
+            },
+            {
+                "id": 12,
+                "question": "I am one of the fastest birds in level flight! I spend most of my life in the air, zipping around with long, curved wings. Who am I?",
+                "options": [air_swift, air_raven, air_pigeon, air_kestrel, air_bald_eagle, air_bumblebee],
+                "animalName": air_swift
             }
         ],
         // Medium questions
@@ -689,47 +762,49 @@ const questions = {
                 "animalName": air_woodpecker
             }
         ]
+    ],
+    // Bonus questions
+    bonus: [
+        [
+            {
+                "id": 1,
+                "question": "I can sleep while flying for hours over the open ocean, gliding thousands of miles without landing. Who am I?",
+                "options": [air_albatross, air_swift, air_bald_eagle, land_camel, ocean_manta_ray, land_koala],
+                "animalName": air_albatross
+            },
+            {
+                "id": 2,
+                "question": "My bite is so powerful it can crush bones and split open frozen carcasses, thanks to reinforced jaw muscles. Who am I?",
+                "options": [land_lynx, land_civet, land_meerkat, air_peregrine_falcon, ocean_orca, land_porcupine],
+                "animalName": land_lynx
+            },
+            {
+                "id": 3,
+                "question": "I can change the colour and pattern of my skin in less than a second, even mimicking moving stripes and ripples. Who am I?",
+                "options": [ocean_cuttlefish, ocean_clownfish, ocean_manta_ray, land_civet, air_kestrel, land_sloth],
+                "animalName": ocean_cuttlefish
+            },
+            {
+                "id": 4,
+                "question": "I can rotate my stomach inside out to clean it, then pull it back in again without injury. Who am I?",
+                "options": [ocean_sea_urchin, ocean_starfish, ocean_manta_ray, land_porcupine, air_stork, land_wombat],
+                "animalName": ocean_sea_urchin
+            },
+            {
+                "id": 5,
+                "question": "I can squeeze my entire body through a hole the size of a coin because I have no hard shell or bones. Who am I?",
+                "options": [ocean_blob_fish, ocean_cuttlefish, ocean_coconut_crab, land_meerkat, air_swift, land_koala],
+                "animalName": ocean_blob_fish
+            },
+            {
+                "id": 6,
+                "question": "A famous luxury perfume — including the original Chanel No. 5 — once relied on a naturally produced scent from me, valued for its warm, musky sweetness. Who am I?",
+                "options": [land_civet, land_meerkat, land_koala, air_pigeon, land_porcupine, air_bumblebee],
+                "animalName": land_civet
+            }
+        ]
     ]
 };
-
-const bonusQuestions = [
-    {
-        "id": 1,
-        "question": "I can sleep while flying for hours over the open ocean, gliding thousands of miles without landing. Who am I?",
-        "options": [air_albatross, air_swift, air_bald_eagle, land_camel, ocean_manta_ray, land_koala],
-        "animalName": air_albatross
-    },
-    {
-        "id": 2,
-        "question": "My bite is so powerful it can crush bones and split open frozen carcasses, thanks to reinforced jaw muscles. Who am I?",
-        "options": [land_lynx, land_civet, land_meerkat, air_peregrine_falcon, ocean_orca, land_porcupine],
-        "animalName": land_lynx
-    },
-    {
-        "id": 3,
-        "question": "I can change the colour and pattern of my skin in less than a second, even mimicking moving stripes and ripples. Who am I?",
-        "options": [ocean_cuttlefish, ocean_clownfish, ocean_manta_ray, land_civet, air_kestrel, land_sloth],
-        "animalName": ocean_cuttlefish
-    },
-    {
-        "id": 4,
-        "question": "I can rotate my stomach inside out to clean it, then pull it back in again without injury. Who am I?",
-        "options": [ocean_sea_urchin, ocean_starfish, ocean_manta_ray, land_porcupine, air_stork, land_wombat],
-        "animalName": ocean_sea_urchin
-    },
-    {
-        "id": 5,
-        "question": "I can squeeze my entire body through a hole the size of a coin because I have no hard shell or bones. Who am I?",
-        "options": [ocean_blob_fish, ocean_cuttlefish, ocean_coconut_crab, land_meerkat, air_swift, land_koala],
-        "animalName": ocean_blob_fish
-    },
-    {
-        "id": 6,
-        "question": "A famous luxury perfume — including the original Chanel No. 5 — once relied on a naturally produced scent from me, valued for its warm, musky sweetness. Who am I?",
-        "options": [land_civet, land_meerkat, land_koala, air_pigeon, land_porcupine, air_bumblebee],
-        "animalName": land_civet
-    }
-];
 
 const themeNameMap = new Map([
     ["sea", "Sea"],
@@ -751,6 +826,10 @@ let currentDifficultyIndex = 0;
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let currentScore;
+
+// Sound
+const disappointment = new Audio("assets/audio/universfield-crowd-disappointment-reaction-352718.mp3");
+const applause = new Audio("assets/audio/roesisch-applause-01-253125.mp3");
 
 /**
  *
@@ -817,9 +896,12 @@ function displayQuestion(parent, question) {
         const button = buttons[i];
         const creature = options[i];
         button.dataset.answer = creature;
-        const url = `./assets/images/${creature.replace("-", "/")}.png`;
-        button.querySelector("img").src = url;
-        button.querySelector(".answer-name").textContent = animalNameMap.get(creature);
+        const url = `./assets/images/${creature.replace("-", "/")}.webp`;
+        const niceName = animalNameMap.get(creature);
+        const img = button.querySelector("img");
+        img.src = url;
+        img.alt = niceName;
+        button.querySelector(".answer-name").textContent = niceName;
     }
 }
 
@@ -830,14 +912,38 @@ function initialiseListeners(parent) {
     }
     const difficultyButtons = document.querySelectorAll("#difficulty-selection button");
     for (const button of difficultyButtons) {
-        button.addEventListener("click", clickDifficulty)
+        button.addEventListener("click", clickDifficulty);
     }
     const themes = document.querySelectorAll(".theme-card");
     for (const theme of themes) {
         theme.addEventListener("click", clickTheme);
     }
-    document.getElementById("play-again-btn").addEventListener("click", e => { startGame(currentTheme); });
-    document.getElementById("choose-set-btn").addEventListener("click", e => { showSection("difficulty-selection"); });
+    document.getElementById("play-again-btn").addEventListener("click",
+        () => { startGame(currentTheme); });
+    document.getElementById("choose-set-btn").addEventListener("click",
+        () => { showSection("difficulty-selection"); });
+    document.getElementById("restart-btn").addEventListener("click",
+        () => { showSection("difficulty-selection"); });
+    document.querySelector("nav button").addEventListener("click", openInstructions);
+    document.getElementById("close-instructions-btn").addEventListener("click", closeInstructions);
+}
+
+function openInstructions(e) {
+    e.preventDefault();
+    const modal = document.getElementById("instructions-modal");
+    // It may be opened automatically in modern browsers
+    if (!modal.open) {
+        modal.showModal();
+    }
+}
+
+function closeInstructions(e) {
+    e.preventDefault();
+    const modal = document.getElementById("instructions-modal");
+    // It may be closed automatically in modern browsers
+    if (modal.open) {
+        modal.close();
+    }
 }
 
 function clickTheme(e) {
@@ -898,6 +1004,12 @@ function nextQuestion() {
 }
 
 function gameOver() {
+    if (currentScore === currentQuestions.length) {
+        applause.play();
+    } else {
+        disappointment.play();
+    }
+
     document.getElementById("final-score").textContent = `${currentScore * 10}`;
     document.getElementById("final-correct").textContent = `${currentScore} / ${currentQuestions.length}`;
     showSection("round-complete-section");
