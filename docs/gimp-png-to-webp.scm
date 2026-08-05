@@ -24,8 +24,6 @@
                      (image (car (gimp-file-load RUN-NONINTERACTIVE input-file input-file)))
                      (layer (car (gimp-image-get-active-layer image)))
                      (output-file (string-append (substring input-file 0 (- (string-length input-file) 4)) ".webp")))
-                (when (not (gimp-image-has-alpha image))
-                  (gimp-layer-add-alpha layer))
                 (gimp-file-save RUN-NONINTERACTIVE image layer output-file output-file)
                 (gimp-image-delete image)
                 (loop (cdr files) (+ count 1))))))))
