@@ -911,9 +911,16 @@ function initialiseListeners(parent) {
     for (const theme of themes) {
         theme.addEventListener("click", clickTheme);
     }
-    document.getElementById("play-again-btn").addEventListener("click", () => { startGame(currentTheme); });
-    document.getElementById("choose-set-btn").addEventListener("click", () => { showSection("difficulty-selection"); });
-    document.getElementById("restart-btn").addEventListener("click", () => { startGame(currentTheme); });
+    document.getElementById("play-again-btn").addEventListener("click",
+        () => { startGame(currentTheme); });
+    document.getElementById("choose-set-btn").addEventListener("click",
+        () => { showSection("difficulty-selection"); });
+    document.getElementById("restart-btn").addEventListener("click",
+        () => { startGame(currentTheme); });
+    document.querySelector("nav button").addEventListener("click",
+        () => { document.getElementById("instructions-modal").showModal() })
+    document.getElementById("close-instructions-btn").addEventListener("click",
+        () => { document.getElementById("instructions-modal").close() });
 }
 
 function clickTheme(e) {
