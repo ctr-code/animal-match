@@ -817,7 +817,7 @@ function displayQuestion(parent, question) {
         const button = buttons[i];
         const creature = options[i];
         button.dataset.answer = creature;
-        const url = `./assets/images/${creature.replace("-", "/")}.png`;
+        const url = `./assets/images/${creature.replace("-", "/")}.webp`;
         button.querySelector("img").src = url;
         button.querySelector(".answer-name").textContent = animalNameMap.get(creature);
     }
