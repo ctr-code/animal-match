@@ -1105,6 +1105,7 @@ main.container {
   background-size: 100% auto; /* full width, natural height */
   background-attachment: scroll;
   z-index: 1;
+  pointer-events: none; /* allow clicks to pass through */
 }
 
 
