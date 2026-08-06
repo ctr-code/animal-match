@@ -181,24 +181,23 @@ The application was tested across multiple screen resolutions and viewports (mob
 
 | Element / Feature | Test Action | Expected Result | Result |
 | :--- | :--- | :--- | :---: |
-| **Navbar Brand Link** | Click `.navbar-brand` (`Animal Match`) | Reloads or navigates to `index.html` | Pass |
-| **How to Play Button** | Click `#how-to-play` button in header | Opens `#instructions-modal` dialog | Pass |
-| **Close Instructions Button** | Click `#close-instructions-btn` in modal | Closes the instructions dialog | Pass |
-| **Difficulty Selection** | Click `.difficulty-btn` (Easy/Medium/Hard) | Sets game difficulty level | Pass |
-| **Theme Selection** | Click `.theme-card` (Land, Sea, or Air) | Selects animal category set | Pass |
-| **Status Bar Display** | View `#theme-value`, `#difficulty-value`, `#question-count`, and `#score-value` | Displays active values (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
-| **Progress Bar** | Check `#progress-bar` width styling | Renders initial percentage (`12.5%`) visually | Pass |
-| **Description Box** | Read `#clue-text` paragraph | Displays animal description text accurately | Pass |
-| **Answer Option Cards** | Click an answer button (`.answer-option-btn`) e.g. `#answer-option-1` | Selects answer, triggers feedback overlay (`#wrong-answer-overlay` on incorrect) | Pass |
-| **Start Over Button** | Click `#restart-btn` | Resets active question state | Pass |
-| **Next Question Button** | Click `#next-btn` after selecting answer | Advances question count and updates clue/choices | Pass |
-| **Round Complete Panel** | Reach final question in set | Displays `#round-complete-section` panel | Pass |
-| **Final Score & Correct Count** | Check summary values on completion screen | Displays `#final-score` and `#final-correct` ratio (`6 / 8`) | Pass |
-| **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts current set | Pass |
-| **Choose Another Set Button**| Click `#choose-set-btn` | Returns to set selection section | Pass |
-| **Win Condition & Audio** | Complete game with a winning score | Triggers applause sound (`roesisch-applause-01-253125.mp3`) and success overlay | Pass |
-| **Game Over Condition & Audio**| Allow timer/lives to expire | Triggers disappointment sound (`universfield-crowd-disappointment-reaction-352718.mp3`) | Pass |
-| **Custom 404 Page** | Navigate to non-existent route | Renders custom `404.html` page with return link | Pass |
+| **Navbar Brand Link** | Click "Animal Match" link | Reloads or navigates to `index.html` | Pass |
+| **How to Play Button** | Click "How to Play" button in header | Opens instructions dialog | Pass |
+| **Close Instructions Button** | Click "Let's Play" button in modal | Closes the instructions dialog | Pass |
+| **Difficulty Selection** | Click a difficulty button (Easy/Medium/Hard) | Sets game difficulty level | Pass |
+| **Theme Selection** | Click a theme card (Land, Sea, or Air) | Selects animal category set | Pass |
+| **Status Bar Display** | Check the theme, difficulty, question count and score display | Displays expected active values e.g. (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
+| **Progress Bar** | Check progress bar width styling | Renders initial percentage (`12.5%`) visually and updates | Pass |
+| **Description Box** | Read clue | Displays animal description text accurately | Pass |
+| **Answer Option Cards** | Click an answer button | Selects answer, and triggers feedback overlay | Pass |
+| **Start Over Button** | Click "Start Over" button | Returns to difficulty selection screen | Pass |
+| **Round Complete Panel** | Answer final question in set | Displays the "Round complete" screen | Pass |
+| **Final Score & Correct Count** | Check summary values on completion screen | Displays final score and correct answer ratio | Pass |
+| **Play Again Button** | Click "Play Again" button | Resets game state and restarts current set | Pass |
+| **Choose Another Set Button**| Click "Choose Another Set" button | Returns to set selection section | Pass |
+| **Win Condition & Audio** | Complete game with a score of 6 or more | Triggers applause sound and success overlay | Pass |
+| **Game Over Condition & Audio**| Complete game with a score of 5 or less | Triggers disappointment sound and failure overlay | Pass |
+| **Custom 404 Page** | Navigate to non-existent page | Renders custom `404.html` page with return link | Pass |
 
 ---
 
