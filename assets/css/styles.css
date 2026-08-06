@@ -99,7 +99,7 @@ body.app-bg::before {
   background: url("../images/navbar-bg.webp") center/cover no-repeat;
 }
 
-.app-navbar .container-fluid {
+.app-navbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
