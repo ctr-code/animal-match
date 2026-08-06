@@ -163,37 +163,76 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 ## Testing & Validation
 
 ### Code Validation
-![HTML Validation](docs/html-validator.png)
-![CSS Validation](docs/css-validator.png)
-![JS Validation](docs/js-validator.png)
+
+#### HTML Validation
+The HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
+- **Result:** Pass — 0 errors, 0 warnings.
+![HTML Validator Result](docs/html-validator.png)
+
+#### CSS Validation
+The CSS stylesheet was validated using the [W3C CSS Validation Service (Jigsaw)](https://jigsaw.w3.org/css-validator/).
+- **Result:** Pass — 0 errors found.
+![CSS Validator Result](docs/css-validator.png)
+
+#### JavaScript Validation
+The JavaScript files (`assets/js/data.js` and `assets/js/script.js`) were linted using [JSHint](https://jshint.com/).
+- **Result:** Pass — 0 warnings, no syntax errors.
+![JS Validator Result](docs/js-validator.png)
+
+---
 
 ### Performance & Responsiveness
-![Lighthouse Desktop](docs/lighthouse-desktop.png)
-![Lighthouse Mobile](docs/lighthouse-mobile.png)
+
+Lighthouse audits were conducted in Chrome DevTools to measure Performance, Accessibility, Best Practices, and SEO across both Mobile and Desktop viewports.
+
+| Viewport | Performance | Accessibility | Best Practices | SEO | Screenshot |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Mobile** | High | 100% | High | High | ![Lighthouse Mobile](docs/lighthouse-mobile.png) |
+| **Desktop** | High | 100% | High | High | ![Lighthouse Desktop](docs/lighthouse-desktop.png) |
+
+#### Responsive Mockup
+The application was tested across multiple screen resolutions and viewports (mobile, tablet, and desktop) as well as major web browsers (Chrome, Firefox, Edge, Safari).
+
 ![Fireship Responsiveness](docs/fireship-responsive-mockup.png)
+
+---
 
 ### Manual Testing
 
 | Element / Feature | Test Action | Expected Result | Result |
 | :--- | :--- | :--- | :---: |
-| **Navbar Brand Link** | Click `🐾 Animal Match` | Reloads or navigates to `index.html` | Pass |
-| **How to Play Button** | Click `.help-link` button in header | Triggers help modal or instructions | Pass |
-| **Status Bar Display** | View Theme, Difficulty, Question, and Score cards | Displays active values (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
-| **Progress Bar** | Check progress bar width styling | Renders initial percentage (`12.5%`) visually | Pass |
-| **Description Box** | Read `#clue-text` paragraph | Displays animal description text accurately | Pass |
-| **Answer Options Grid** | Select an answer radio option (Giraffe, Elephant, etc.) | Radio input checks and highlights answer card | Pass |
-| **Submit Answer Button** | Click `#submit-btn` | Validates answer and triggers `#feedback-message` | Pass |
-| **Next Question Button** | Click `#next-btn` after answering | Advances question count and updates clue/choices | Pass |
-| **Round Complete Panel** | Reach final question in set | Hides active panel and shows `#round-complete-panel` | Pass |
-| **Final Score & Correct Count** | Check summary values on completion screen | Displays final score (`#final-score`) and correct ratio (`#final-correct`) | Pass |
-| **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts active theme set | Pass |
-| **Choose Another Set Button**| Click `#choose-set-btn` | Navigates back to set selection | Pass |
+| **Navbar Brand Link** | Click "Animal Match" link | Reloads or navigates to `index.html` | Pass |
+| **How to Play Button** | Click "How to Play" button in header | Opens instructions dialog | Pass |
+| **Close Instructions Button** | Click "Let's Play" button in modal | Closes the instructions dialog | Pass |
+| **Difficulty Selection** | Click a difficulty button (Easy/Medium/Hard) | Sets game difficulty level | Pass |
+| **Theme Selection** | Click a theme card (Land, Sea, or Air) | Selects animal category set | Pass |
+| **Status Bar Display** | Check the theme, difficulty, question count and score display | Displays expected active values e.g. (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
+| **Progress Bar** | Check progress bar width styling | Renders initial percentage (`12.5%`) visually and updates | Pass |
+| **Description Box** | Read clue | Displays animal description text accurately | Pass |
+| **Answer Option Cards** | Click an answer button | Selects answer, and triggers feedback overlay | Pass |
+| **Start Over Button** | Click "Start Over" button | Returns to difficulty selection screen | Pass |
+| **Round Complete Panel** | Answer final question in set | Displays the "Round complete" screen | Pass |
+| **Final Score & Correct Count** | Check summary values on completion screen | Displays final score and correct answer ratio | Pass |
+| **Play Again Button** | Click "Play Again" button | Resets game state and restarts current set | Pass |
+| **Choose Another Set Button**| Click "Choose Another Set" button | Returns to set selection section | Pass |
+| **Win Condition & Audio** | Complete game with a score of 6 or more | Triggers applause sound and success overlay | Pass |
+| **Game Over Condition & Audio**| Complete game with a score of 5 or less | Triggers disappointment sound and failure overlay | Pass |
+| **Custom 404 Page** | Navigate to non-existent page | Renders custom `404.html` page with return link | Pass |
+
+---
+
+## Technical Features & Performance Optimizations
+
+* **Image Optimization (WebP):** All raw PNG animal assets were converted to lightweight `.webp` format utilizing a custom GIMP batch processing script (`docs/gimp-png-to-webp.scm`), significantly reducing network payload and improving page load speeds.
+* **Modular Codebase:** Separated animal dataset configurations (`assets/js/data.js`) from game control logic (`assets/js/script.js`) to adhere to clean code principles.
+* **Custom Error Handling:** Implemented `404.html` to gracefully handle broken links or direct invalid requests.
 
 ---
 
 ## Bugs
 * **JS Validator Console Error:** Resolved console errors regarding placeholder images by utilizing `favicon.ico` already available in the browser environment.
 * **Fireship Screenshot Styling:** Changed Fireship tool background to white using browser DevTools to ensure responsive screens remain clearly visible in dark/light modes.
+* **Footer Blocking Button Click/Cursor:** Fixed an issue where the footer overlay blocked cursor interaction and button clicks by applying `pointer-events: none` to the footer overlay element.
 
 ---
 
@@ -222,3 +261,7 @@ The live deployed site can be accessed here: [Animal Match Live Site](https://ct
 * **[GitHub](https://github.com/)** for repository hosting and GitHub Pages.
 * **[Bootstrap](https://getbootstrap.com/)** for layout styling and component styling.
 * **[Coolors](https://coolors.co/)** for color palette generation.
+* **Audio Assets:**
+  * Applause effect: `roesisch-applause-01-253125.mp3` via Pixabay.
+  * Disappointment effect: `universfield-crowd-disappointment-reaction-352718.mp3` via Pixabay.
+* **Responsive Visuals:** Device mockup generated using Fireship / Am I Responsive tools.
