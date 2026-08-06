@@ -2,7 +2,13 @@
 
 🚀 **Live Site:** [Animal Match Live Site](https://ctr-code.github.io/animal-match/)
 
-A game of matching animal descriptions to pictures.
+## Introduction
+
+**Animal Match** is a fun, engaging one‑page game designed primarily for children aged 6–10, while still offering enough variety and challenge to be enjoyable for older players and adults. Our aim was to create a playful, visually appealing experience that feels smooth to use, easy to understand, and rewarding to complete.
+
+The game centres around a simple but captivating goal: match an animal fact or description to the correct animal card. Each round contains **8 questions**, and players can choose from **three difficulty levels** — *Easy*, *Medium*, and *Hard* — as well as **three themed categories**: *Sea*, *Land*, and *Air*. This structure gives the game replayability and allows players to explore different types of animals and facts at their own pace.
+
+Building Animal Match gave us the opportunity to flex and develop our skills across **HTML**, **CSS**, and **JavaScript**, from responsive layout design and custom styling to dynamic content handling and interactive game logic. The project challenged us to think creatively about user experience, accessibility, and performance while crafting a game that feels lively, colourful, and enjoyable for all ages.
 
 ---
 
@@ -73,7 +79,11 @@ The initial UI wireframe is shown below and is the primary design reference duri
 ![Animal Match Wireframe](docs/wireframe.png)
 
 ### Typography
-* **Headers & Body Text:** Standard Bootstrap sans-serif font stack.
+- **Headers:** "Henny Penny", cursive  
+  - Used for playful, characterful headings. Its whimsical curves match the game's light‑hearted, storybook feel and help key titles stand out.
+
+- **Body Text:** "Caveat", "Segoe UI", sans-serif  
+  - "Caveat" provides a friendly, handwritten tone that keeps the interface warm and approachable. "Segoe UI" acts as a clean, modern fallback to ensure readability across all devices.
 
 ### Colour Scheme
 
@@ -130,14 +140,39 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 ## Testing & Validation
 
 ### Code Validation
-![HTML Validation](docs/html-validator.png)
-![CSS Validation](docs/css-validator.png)
-![JS Validation](docs/js-validator.png)
+
+#### HTML Validation
+The HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
+- **Result:** Pass — 0 errors, 0 warnings.
+![HTML Validator Result](docs/html-validator.png)
+
+#### CSS Validation
+The CSS stylesheet was validated using the [W3C CSS Validation Service (Jigsaw)](https://jigsaw.w3.org/css-validator/).
+- **Result:** Pass — 0 errors found.
+![CSS Validator Result](docs/css-validator.png)
+
+#### JavaScript Validation
+The JavaScript files (`assets/js/data.js` and `assets/js/script.js`) were linted using [JSHint](https://jshint.com/).
+- **Result:** Pass — 0 warnings, no syntax errors.
+![JS Validator Result](docs/js-validator.png)
+
+---
 
 ### Performance & Responsiveness
-![Lighthouse Desktop](docs/lighthouse-desktop.png)
-![Lighthouse Mobile](docs/lighthouse-mobile.png)
+
+Lighthouse audits were conducted in Chrome DevTools to measure Performance, Accessibility, Best Practices, and SEO across both Mobile and Desktop viewports.
+
+| Viewport | Performance | Accessibility | Best Practices | SEO | Screenshot |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Mobile** | High | 100% | High | High | ![Lighthouse Mobile](docs/lighthouse-mobile.png) |
+| **Desktop** | High | 100% | High | High | ![Lighthouse Desktop](docs/lighthouse-desktop.png) |
+
+#### Responsive Mockup
+The application was tested across multiple screen resolutions and viewports (mobile, tablet, and desktop) as well as major web browsers (Chrome, Firefox, Edge, Safari).
+
 ![Fireship Responsiveness](docs/fireship-responsive-mockup.png)
+
+---
 
 ### Manual Testing
 
@@ -158,6 +193,17 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 | **Final Score & Correct Count** | Check summary values on completion screen | Displays `#final-score` and `#final-correct` ratio (`6 / 8`) | Pass |
 | **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts current set | Pass |
 | **Choose Another Set Button**| Click `#choose-set-btn` | Returns to set selection section | Pass |
+| **Win Condition & Audio** | Complete game with a winning score | Triggers applause sound (`roesisch-applause-01-253125.mp3`) and success overlay | Pass |
+| **Game Over Condition & Audio**| Allow timer/lives to expire | Triggers disappointment sound (`universfield-crowd-disappointment-reaction-352718.mp3`) | Pass |
+| **Custom 404 Page** | Navigate to non-existent route | Renders custom `404.html` page with return link | Pass |
+
+---
+
+## Technical Features & Performance Optimizations
+
+* **Image Optimization (WebP):** All raw PNG animal assets were converted to lightweight `.webp` format utilizing a custom GIMP batch processing script (`docs/gimp-png-to-webp.scm`), significantly reducing network payload and improving page load speeds.
+* **Modular Codebase:** Separated animal dataset configurations (`assets/js/data.js`) from game control logic (`assets/js/script.js`) to adhere to clean code principles.
+* **Custom Error Handling:** Implemented `404.html` to gracefully handle broken links or direct invalid requests.
 
 ---
 
@@ -193,3 +239,7 @@ The live deployed site can be accessed here: [Animal Match Live Site](https://ct
 * **[GitHub](https://github.com/)** for repository hosting and GitHub Pages.
 * **[Bootstrap](https://getbootstrap.com/)** for layout styling and component styling.
 * **[Coolors](https://coolors.co/)** for color palette generation.
+* **Audio Assets:**
+  * Applause effect: `roesisch-applause-01-253125.mp3` via Pixabay.
+  * Disappointment effect: `universfield-crowd-disappointment-reaction-352718.mp3` via Pixabay.
+* **Responsive Visuals:** Device mockup generated using Fireship / Am I Responsive tools.
