@@ -246,6 +246,35 @@ main.container {
     radial-gradient(circle at top, rgba(255, 214, 87, 0.22), transparent 34%);
   box-shadow: var(--shadow-soft);
 }
+
+  .welcome-panel {
+    max-width: 58rem;
+    padding: clamp(1.15rem, 2vw, 1.65rem);
+    border: 1px solid rgba(32, 49, 31, 0.08);
+    border-radius: 1.5rem;
+    background:
+      linear-gradient(180deg, rgba(255, 251, 240, 0.99), rgba(255, 255, 255, 0.96)),
+      radial-gradient(circle at top, rgba(255, 188, 74, 0.2), transparent 42%);
+    box-shadow: 0 14px 28px rgba(36, 48, 71, 0.12);
+  }
+
+  .welcome-title {
+    margin-bottom: 0;
+    font-family: "Henny Penny", cursive;
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    color: #223321;
+    line-height: 1.08;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .welcome-text {
+    max-width: 46rem;
+    margin-inline: auto;
+    font-size: clamp(1rem, 1.55vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
 /* Shared card styles */
 .theme-card,
 .stats-panel,
@@ -1099,7 +1128,7 @@ main.container {
   }
 }
 
-
+@media (max-width: 575.98px) {
   .jungle-footer {
     min-height: 170px;
   }
