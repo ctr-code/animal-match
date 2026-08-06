@@ -223,7 +223,7 @@ const questions = {
             {
                 "id": 11,
                 "question": "I am the only animal where the males become pregnant and give birth, carrying the developing young in a specialised pouch. Who am I?",
-                "options": [ocean_seahorse, ocean_clownfish, ocean_manta_ray, land_koala, air_pigeon, land_meerkat],
+                "options": [ocean_seahorse, ocean_clownfish, ocean_manta_ray, ocean_blob_fish, ocean_jellyfish, ocean_cuttlefish],
                 "animalName": ocean_seahorse
             },
             {

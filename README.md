@@ -1,6 +1,7 @@
 # Animal Match
 
-🚀 **Live Site:** [Animal Match Live Site](https://ctr-code.github.io/animal-match/)
+You can find our deployed site **[here](https://ctr-code.github.io/animal-match/index.html)**.
+
 
 ## Introduction
 
@@ -9,6 +10,7 @@
 The game centres around a simple but captivating goal: match an animal fact or description to the correct animal card. Each round contains **8 questions**, and players can choose from **three difficulty levels** — *Easy*, *Medium*, and *Hard* — as well as **three themed categories**: *Sea*, *Land*, and *Air*. This structure gives the game replayability and allows players to explore different types of animals and facts at their own pace.
 
 Building Animal Match gave us the opportunity to flex and develop our skills across **HTML**, **CSS**, and **JavaScript**, from responsive layout design and custom styling to dynamic content handling and interactive game logic. The project challenged us to think creatively about user experience, accessibility, and performance while crafting a game that feels lively, colourful, and enjoyable for all ages.
+
 
 ---
 
@@ -84,6 +86,7 @@ The initial UI wireframe is shown below and is the primary design reference duri
 
 - **Body Text:** "Caveat", "Segoe UI", sans-serif  
   - "Caveat" provides a friendly, handwritten tone that keeps the interface warm and approachable. "Segoe UI" acts as a clean, modern fallback to ensure readability across all devices.
+
 
 ### Colour Scheme
 
