@@ -1,5 +1,7 @@
 # Animal Match
 
+🚀 **Live Site:** [Animal Match Live Site](https://ctr-code.github.io/animal-match/)
+
 A game of matching animal descriptions to pictures.
 
 ---
@@ -141,24 +143,28 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 
 | Element / Feature | Test Action | Expected Result | Result |
 | :--- | :--- | :--- | :---: |
-| **Navbar Brand Link** | Click `🐾 Animal Match` | Reloads or navigates to `index.html` | Pass |
-| **How to Play Button** | Click `.help-link` button in header | Triggers help modal or instructions | Pass |
-| **Status Bar Display** | View Theme, Difficulty, Question, and Score cards | Displays active values (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
-| **Progress Bar** | Check progress bar width styling | Renders initial percentage (`12.5%`) visually | Pass |
+| **Navbar Brand Link** | Click `.navbar-brand` (`Animal Match`) | Reloads or navigates to `index.html` | Pass |
+| **How to Play Button** | Click `#how-to-play` button in header | Opens `#instructions-modal` dialog | Pass |
+| **Close Instructions Button** | Click `#close-instructions-btn` in modal | Closes the instructions dialog | Pass |
+| **Difficulty Selection** | Click `.difficulty-btn` (Easy/Medium/Hard) | Sets game difficulty level | Pass |
+| **Theme Selection** | Click `.theme-card` (Land, Sea, or Air) | Selects animal category set | Pass |
+| **Status Bar Display** | View `#theme-value`, `#difficulty-value`, `#question-count`, and `#score-value` | Displays active values (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
+| **Progress Bar** | Check `#progress-bar` width styling | Renders initial percentage (`12.5%`) visually | Pass |
 | **Description Box** | Read `#clue-text` paragraph | Displays animal description text accurately | Pass |
-| **Answer Options Grid** | Select an answer radio option (Giraffe, Elephant, etc.) | Radio input checks and highlights answer card | Pass |
-| **Submit Answer Button** | Click `#submit-btn` | Validates answer and triggers `#feedback-message` | Pass |
-| **Next Question Button** | Click `#next-btn` after answering | Advances question count and updates clue/choices | Pass |
-| **Round Complete Panel** | Reach final question in set | Hides active panel and shows `#round-complete-panel` | Pass |
-| **Final Score & Correct Count** | Check summary values on completion screen | Displays final score (`#final-score`) and correct ratio (`#final-correct`) | Pass |
-| **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts active theme set | Pass |
-| **Choose Another Set Button**| Click `#choose-set-btn` | Navigates back to set selection | Pass |
+| **Answer Option Cards** | Click an answer button (`.answer-option-btn`) e.g. `#answer-option-1` | Selects answer, triggers feedback overlay (`#wrong-answer-overlay` on incorrect) | Pass |
+| **Start Over Button** | Click `#restart-btn` | Resets active question state | Pass |
+| **Next Question Button** | Click `#next-btn` after selecting answer | Advances question count and updates clue/choices | Pass |
+| **Round Complete Panel** | Reach final question in set | Displays `#round-complete-section` panel | Pass |
+| **Final Score & Correct Count** | Check summary values on completion screen | Displays `#final-score` and `#final-correct` ratio (`6 / 8`) | Pass |
+| **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts current set | Pass |
+| **Choose Another Set Button**| Click `#choose-set-btn` | Returns to set selection section | Pass |
 
 ---
 
 ## Bugs
 * **JS Validator Console Error:** Resolved console errors regarding placeholder images by utilizing `favicon.ico` already available in the browser environment.
 * **Fireship Screenshot Styling:** Changed Fireship tool background to white using browser DevTools to ensure responsive screens remain clearly visible in dark/light modes.
+* **Footer Blocking Button Click/Cursor:** Fixed an issue where the footer overlay blocked cursor interaction and button clicks by applying `pointer-events: none` to the footer overlay element.
 
 ---
 
