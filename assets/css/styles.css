@@ -972,17 +972,30 @@ main.container {
   color: var(--accent);
 }
 
-.instructions-modal,
+#instructions-modal,
 .wrong-answer-overlay {
   position: fixed;
   inset: 0;
   z-index: 1050;
 }
 
-.instructions-modal {
+#instructions-modal {
   display: grid;
   place-items: center;
   padding: 1rem;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  overflow: visible;
+  max-width: none;
+  max-height: none;
+}
+
+#instructions-modal::backdrop {
+  background: rgba(12, 22, 15, 0.58);
+  backdrop-filter: blur(6px);
 }
 
 
@@ -1016,6 +1029,40 @@ main.container {
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   line-height: 1.4;
   color: var(--muted);
+}
+
+@media (max-width: 575.98px) {
+  #instructions-modal {
+    padding: 0.5rem;
+  }
+
+  .instructions-card {
+    width: min(96vw, 42rem);
+  }
+
+  .instructions-card .card-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .instructions-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1080px) {
+  .instructions-card {
+    width: min(94vw, 40rem);
+  }
+
+  .instructions-card .card-body {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .instructions-text {
+    font-size: clamp(0.98rem, 1.55vw, 1.15rem);
+    line-height: 1.48;
+  }
 }
 
 .wrong-answer-overlay {
