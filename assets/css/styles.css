@@ -76,11 +76,6 @@ body.app-bg::before {
   mix-blend-mode: normal;
 }
 
-.hidden {
-  display: none !important;
-}
-
-
 .container {
   position: relative;
   z-index: 1;
@@ -1008,7 +1003,11 @@ main.container {
   font-weight: inherit;
   text-decoration: underline;
 }
+/* Hidden */
 
+.hidden {
+  display: none;
+}
 
 /* Media Queries */
 
