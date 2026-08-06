@@ -118,7 +118,7 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 * **Bootstrap:** Used for containers and layout structure throughout the project to keep the file structure organized and easily targeted for styling/scripting.
 * **VSCode:** The primary IDE used to write and develop code for the project.
 * **GitHub:** Used for repository hosting, project management, branch workflow, and deployment.
-* **Am I Responsive? (Fireship):** Used for visual inspection of page layouts across desktop and mobile devices.
+* **Am I Responsive? (Fireship):** Used for creating screenshots of the app's responsiveness across desktop and mobile devices.
 * **W3C Markup Validation Service:** Used to test and validate HTML code.
 * **Google DevTools:** Used for debugging functionality, checking console errors, and running Lighthouse audits.
 
