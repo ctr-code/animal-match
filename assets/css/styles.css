@@ -456,7 +456,7 @@ main.container {
   min-width: 7rem;
   background: rgba(255, 255, 255, 0.84);
   color: var(--text);
-  border: 1px solid rgba(32, 49, 31, 0.1);
+  border: 2px solid rgba(32, 49, 31, 0.1);
 }
 
 .difficulty-btn:hover,
@@ -468,7 +468,7 @@ main.container {
     rgba(255, 212, 87, 0.95),
     rgba(255, 235, 166, 0.95)
   );
-  border: 2px solid rgba(247, 120, 35, 0.788);
+  border-color: rgba(247, 120, 35, 0.788);
   transform: translateY(-2px);
 }
 
