@@ -862,6 +862,7 @@ main.container {
   font-family: "Henny Penny", cursive;
   font-size: clamp(0.95rem, 1.5vw, 1.15rem);
   color: #243622;
+  margin: 0 -1em;
 }
 
 .game-actions,
@@ -1031,39 +1032,6 @@ main.container {
   color: var(--muted);
 }
 
-@media (max-width: 575.98px) {
-  #instructions-modal {
-    padding: 0.5rem;
-  }
-
-  .instructions-card {
-    width: min(96vw, 42rem);
-  }
-
-  .instructions-card .card-body {
-    padding: 1.25rem 1rem !important;
-  }
-
-  .instructions-text {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 1080px) {
-  .instructions-card {
-    width: min(94vw, 40rem);
-  }
-
-  .instructions-card .card-body {
-    padding: clamp(1.25rem, 2.5vw, 2rem);
-  }
-
-  .instructions-text {
-    font-size: clamp(0.98rem, 1.55vw, 1.15rem);
-    line-height: 1.48;
-  }
-}
 
 .wrong-answer-overlay {
   pointer-events: none;
@@ -1134,6 +1102,36 @@ main.container {
 
 /* Media Queries */
 
+@media (max-width: 410px) {
+  .answer-name {
+    font-size: 0.8rem; /* adjust as needed */
+  }
+}
+
+@media (max-width: 360px) {
+  .answer-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #instructions-modal {
+    padding: 0.5rem;
+  }
+
+  .instructions-card {
+    width: min(96vw, 42rem);
+  }
+
+  .instructions-card .card-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .instructions-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
 
 @media (max-width: 575.98px) {
 
@@ -1310,6 +1308,22 @@ main.container {
     background-size: 100% auto;
   }
 }
+
+@media (max-width: 1080px) {
+  .instructions-card {
+    width: min(94vw, 40rem);
+  }
+
+  .instructions-card .card-body {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .instructions-text {
+    font-size: clamp(0.98rem, 1.55vw, 1.15rem);
+    line-height: 1.48;
+  }
+}
+
 @media (min-width: 1400px) {
    .jungle-footer {
     min-height: 320px; /* allow footer to grow only if image needs it */
