@@ -71,7 +71,7 @@ The initial UI wireframe is shown below and is the primary design reference duri
 ![Animal Match Wireframe](docs/wireframe.png)
 
 ### Typography
-* **Headers & Body Text:** [Font selections to be updated]
+* **Headers & Body Text:** Standard Bootstrap sans-serif font stack.
 
 ### Colour Scheme
 
@@ -92,7 +92,7 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 
 ---
 
-## Copilot AI Assistance
+## Copilot & Gemini AI Assistance
 
 ### Image Optimization Script (GIMP & Copilot)
 * **Usage:** Copilot was used to write a GIMP script to convert `.png` images to `.webp`.
@@ -107,6 +107,7 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 * **JS Validator & Console Error Fix:** AI was used to solve a console error appearing in the JavaScript validator regarding placeholder images in game cards. An initial suggestion to replace the source with an SVG failed, but a second suggestion to use `favicon.ico` succeeded as it was already loaded by the browser.
 * **CSS-Only Modals:** AI was used to explain and implement modal functionality without requiring extra JavaScript.
 * **Code Snippets:** AI assistance was used to check code, write standard snippets, and provide favicon file/link references.
+* **Gemini AI Reflections:** Gemini AI was used to assist with documentation editing, structuring manual test suites directly from the HTML code, and organizing file structure guidelines for GitHub PRs.
 
 ---
 
@@ -124,23 +125,47 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 
 ---
 
-## Testing
+## Testing & Validation
+
+### Code Validation
+![HTML Validation](docs/html-validator.png)
+![CSS Validation](docs/css-validator.png)
+![JS Validation](docs/js-validator.png)
+
+### Performance & Responsiveness
+![Lighthouse Desktop](docs/lighthouse-desktop.png)
+![Lighthouse Mobile](docs/lighthouse-mobile.png)
+![Fireship Responsiveness](docs/fireship-responsive-mockup.png)
 
 ### Manual Testing
-| User Story | Test | Result |
-| :--- | :--- | :---: |
-| 1 | Check that animal sets are listed and selectable | Pending |
-| 2 | Check that description matches image choices | Pending |
-| 3 | Check that instant feedback and score update works | Pending |
+
+| Element / Feature | Test Action | Expected Result | Result |
+| :--- | :--- | :--- | :---: |
+| **Navbar Brand Link** | Click `🐾 Animal Match` | Reloads or navigates to `index.html` | Pass |
+| **How to Play Button** | Click `.help-link` button in header | Triggers help modal or instructions | Pass |
+| **Status Bar Display** | View Theme, Difficulty, Question, and Score cards | Displays active values (`Land`, `Easy`, `1 / 8`, `0`) | Pass |
+| **Progress Bar** | Check progress bar width styling | Renders initial percentage (`12.5%`) visually | Pass |
+| **Description Box** | Read `#clue-text` paragraph | Displays animal description text accurately | Pass |
+| **Answer Options Grid** | Select an answer radio option (Giraffe, Elephant, etc.) | Radio input checks and highlights answer card | Pass |
+| **Submit Answer Button** | Click `#submit-btn` | Validates answer and triggers `#feedback-message` | Pass |
+| **Next Question Button** | Click `#next-btn` after answering | Advances question count and updates clue/choices | Pass |
+| **Round Complete Panel** | Reach final question in set | Hides active panel and shows `#round-complete-panel` | Pass |
+| **Final Score & Correct Count** | Check summary values on completion screen | Displays final score (`#final-score`) and correct ratio (`#final-correct`) | Pass |
+| **Play Again Button** | Click `#play-again-btn` | Resets game state and restarts active theme set | Pass |
+| **Choose Another Set Button**| Click `#choose-set-btn` | Navigates back to set selection | Pass |
 
 ---
 
 ## Bugs
-* [Document any bugs encountered and their fixes here]
+* **JS Validator Console Error:** Resolved console errors regarding placeholder images by utilizing `favicon.ico` already available in the browser environment.
+* **Fireship Screenshot Styling:** Changed Fireship tool background to white using browser DevTools to ensure responsive screens remain clearly visible in dark/light modes.
 
 ---
 
 ## Deployment
+
+### Live Site
+The live deployed site can be accessed here: [Animal Match Live Site](https://ctr-code.github.io/animal-match/)
 
 ### Forking & Cloning
 1. Navigate to the GitHub repository.
