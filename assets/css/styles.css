@@ -976,18 +976,20 @@ main.container {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;      
-  min-height: 280px;
+  width: 100%;
+  height: 180px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
   background-image: url("../images/footer-bg.png");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: 100% auto;
-
+  background-size: 100% auto; /* full width, natural height */
+  background-attachment: scroll;
   z-index: 1;
 }
+
 
 .jungle-footer p {
   position: relative;
