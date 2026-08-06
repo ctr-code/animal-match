@@ -91,7 +91,7 @@ function initialiseListeners(parent) {
         () => { showSection("difficulty-selection"); });
     document.getElementById("restart-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
-    document.querySelector("nav button").addEventListener("click", openInstructions);
+    document.querySelector("#how-to-play").addEventListener("click", openInstructions);
     document.getElementById("close-instructions-btn").addEventListener("click", closeInstructions);
 }
 
