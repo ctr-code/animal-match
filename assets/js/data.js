@@ -1,4 +1,5 @@
-/* jshint esversion:6 */
+/* jshint esversion:11 */
+/* exported questions, animalNameMap */
 
 // These correspond to the image file names
 const air_albatross = "air-albatross";
