@@ -71,7 +71,12 @@ The initial UI wireframe is shown below and is the primary design reference duri
 ![Animal Match Wireframe](docs/wireframe.png)
 
 ### Typography
-* **Headers & Body Text:** [Font selections to be updated]
+- **Headers:** "Henny Penny", cursive  
+  - Used for playful, characterful headings. Its whimsical curves match the game's light‑hearted, storybook feel and help key titles stand out.
+
+- **Body Text:** "Caveat", "Segoe UI", sans-serif  
+  - "Caveat" provides a friendly, handwritten tone that keeps the interface warm and approachable. "Segoe UI" acts as a clean, modern fallback to ensure readability across all devices.
+
 
 ### Colour Scheme
 
