@@ -492,7 +492,7 @@ main.container {
 }
 
 .game-section {
-  width: min(80%, 1100px);
+  width: min(100%, 1100px);
   margin-inline: auto;
   padding: clamp(0.85rem, 1.5vw, 1.35rem);
   border-radius: 1.75rem;
@@ -1011,56 +1011,63 @@ main.container {
 
 /* Media Queries */
 
-@media (min-width: 1000px) {
-  .jungle-footer {
-    height: 270px; /* increase height for wide screens */
-  }
-}
 
-@media (max-width: 991.98px) {
-  #hero {
-    border-radius: 1.5rem;
+@media (max-width: 575.98px) {
+
+  #hero h1 {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
   }
 
-  .jungle-footer {
-    min-height: 180px;        /* never shrink below this */
-    height: auto;             /* allow it to grow if needed */
-    background-size: cover;   /* zooms image instead of shrinking */
-    background-position: bottom center;
+  .app-subtitle {
+    font-size: 1.05rem;
   }
 
-  .game-section {
-    border-radius: 1.5rem;
-  }
-
-  .stats-panel {
-    border-radius: 1.5rem;
-  }
-
-  .clue-card,
-  .answer-panel,
-  .complete-card {
-    border-radius: 1.25rem;
+  .status-value,
+  .summary-value {
+    font-size: 1.35rem;
   }
 
   .clue-text {
-    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  #answer-grid > [class*="col-"] {
+    margin-bottom: 0rem;
+  }
+
+  .stat-item {
+    padding: 0.1rem 0.7rem;
   }
 }
 
-@media (min-width: 992px) and (min-height: 900px) {
-  main.container {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+@media (max-width: 575.98px) {
+  .app-navbar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .game-section {
-    margin-top: 0.75rem;
+  /* override Bootstrap's ms-auto */
+  .app-navbar .ms-auto {
+    margin-left: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .clue-card .card-body,
-  .answer-panel .card-body {
-    padding: 0.95rem 1.1rem;
+  .app-title {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .help-link {
+    display: inline-flex;
+    margin-right: 0;
   }
 }
 
@@ -1113,64 +1120,69 @@ main.container {
   }
 }
 
-@media (max-width: 575.98px) {
-  .app-navbar .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding-left: 0;
-    padding-right: 0;
+@media (max-width: 991.98px) {
+  #hero {
+    border-radius: 1.5rem;
   }
 
-  /* override Bootstrap's ms-auto */
-  .app-navbar .ms-auto {
-    margin-left: 0 !important;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .jungle-footer {
+    min-height: 180px;        /* never shrink below this */
+    height: auto;             /* allow it to grow if needed */
+    background-size: cover;   /* zooms image instead of shrinking */
+    background-position: bottom center;
   }
 
-  .app-title {
-    margin-left: 0;
-    text-align: center;
-    width: 100%;
+  .game-section {
+    border-radius: 1.5rem;
   }
 
-  .help-link {
-    display: inline-flex;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 575.98px) {
-
-  #hero h1 {
-    font-size: clamp(1.9rem, 10vw, 2.8rem);
+  .stats-panel {
+    border-radius: 1.5rem;
   }
 
-  .app-subtitle {
-    font-size: 1.05rem;
-  }
-
-  .status-value,
-  .summary-value {
-    font-size: 1.35rem;
+  .clue-card,
+  .answer-panel,
+  .complete-card {
+    border-radius: 1.25rem;
   }
 
   .clue-text {
-    font-size: 1.2rem;
-  }
-
-  #answer-grid > [class*="col-"] {
-    margin-bottom: 0rem;
-  }
-
-  .stat-item {
-    padding: 0.1rem 0.7rem;
+    text-align: center;
   }
 }
+
+
+@media (min-width: 992px) and (min-height: 900px) {
+  main.container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .game-section {
+    margin-top: 0.75rem;
+  }
+
+  .clue-card .card-body,
+  .answer-panel .card-body {
+    padding: 0.95rem 1.1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+   .jungle-footer {
+    min-height: 190px; /* allow footer to grow only if image needs it */
+    height: auto;      /* prevents covering content */
+    background-size: 100% auto;
+  }
+}
+@media (min-width: 1400px) {
+   .jungle-footer {
+    min-height: 320px; /* allow footer to grow only if image needs it */
+    height: auto;      /* prevents covering content */
+    background-size: 100% auto;
+  }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   *,
