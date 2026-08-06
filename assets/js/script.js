@@ -1,4 +1,5 @@
-/* jshint esversion:6 */
+/* jshint esversion:11 */
+/* global questions, animalNameMap */
 
 const themeNameMap = new Map([
     ["sea", "Sea"],
