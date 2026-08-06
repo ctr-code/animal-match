@@ -55,12 +55,7 @@ The site owner’s goal is to build an interactive single-page game that allows 
 ### User Stories
 
 - As a player, I want to choose from several animal sets such as Land, Sea and Air animals, so that I can play with different themes.
-  - Acceptance Criteria:
-    - Display a card for each of Land, Sea and Air animals.
-    - When a card is selected switch to the game page with the URL fragment specifying the selection, e.g. `./game.html#air`.
 - As a player, I want to choose a difficulty level so I can continue to challenge myself.
-  - Acceptance Criteria:
-    - The game provides at least one selectable difficulty option.
 - As a player, I want to view a description of an animal and a set of pictures of possible answers, so that I can identify the correct animal.
 - As a player, I want to select one animal from the picture choices, so that I can make my guess.
 - As a player, I want to move to the next description after I answer, so that the game continues smoothly.
