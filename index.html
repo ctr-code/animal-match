@@ -377,7 +377,7 @@
 
         <!-- INSTRUCTIONS MODAL -->
         <dialog id="instructions-modal" aria-labelledby="instructions-title" aria-describedby="instructions-text">
-            <div class="instructions-card card text-center">
+            <div class="instructions-card card text-center hidden">
                 <div class="card-body p-4 p-md-5">
                     <h2 id="instructions-title" class="instructions-title mb-3">How to Play</h2>
                     <p id="instructions-text" class="instructions-text mb-4">
@@ -386,10 +386,11 @@
                         try again and keep an eye on your score! Answer all the questions to complete the round. You can
                         play again or choose a new set of animals to keep the adventure going!
                     </p>
-                    <button id="close-instructions-btn" class="btn complete-primary-btn px-4 py-2" type="button"
-                        command="close" commandfor="instructions-modal">
-                        Let's Play
-                    </button>
+                    <form method="dialog">
+                        <button id="close-instructions-btn" class="btn complete-primary-btn px-4 py-2" type="submit">
+                            Let's Play
+                        </button>
+                    </form>
                 </div>
             </div>
         </dialog>

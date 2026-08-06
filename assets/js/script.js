@@ -93,12 +93,13 @@ function initialiseListeners(parent) {
     document.getElementById("restart-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
     document.querySelector("#how-to-play").addEventListener("click", openInstructions);
-    document.getElementById("close-instructions-btn").addEventListener("click", closeInstructions);
+    document.getElementById("instructions-modal").addEventListener("close", hideInstructionsCard);
 }
 
 // Open the instructions
 function openInstructions(e) {
     e.preventDefault();
+    document.querySelector(".instructions-card").classList.remove("hidden");
     const modal = document.getElementById("instructions-modal");
     // It may be opened automatically in modern browsers
     if (!modal.open) {
@@ -106,14 +107,8 @@ function openInstructions(e) {
     }
 }
 
-// Close the instructions
-function closeInstructions(e) {
-    e.preventDefault();
-    const modal = document.getElementById("instructions-modal");
-    // It may be closed automatically in modern browsers
-    if (modal.open) {
-        modal.close();
-    }
+function hideInstructionsCard() {
+    document.querySelector(".instructions-card").classList.add("hidden");
 }
 
 // Select the difficulty
