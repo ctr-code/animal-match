@@ -27,7 +27,13 @@
     <nav class="navbar navbar-expand-lg app-navbar py-1">
         <div class="container">
             <a class="navbar-brand fw-bold app-title" href="index.html">Animal Match</a>
-            <div class="ms-auto">
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <button id="volume-toggle-btn" class="btn btn-link help-link text-decoration-none" type="button"
+                    aria-label="Toggle sound">
+                    🔊
+                </button>
+
                 <button class="btn btn-link help-link text-decoration-none" type="button" command="show-modal"
                     commandfor="instructions-modal">
                     How to Play
@@ -375,12 +381,14 @@
                 <div class="card-body p-4 p-md-5">
                     <h2 id="instructions-title" class="instructions-title mb-3">How to Play</h2>
                     <p id="instructions-text" class="instructions-text mb-4">
-                        Read the clue, pick the animal that matches, and choose the correct answer. If you get it wrong,
-                        try again and keep an eye on your score.
+                        Pick your difficulty level and then your theme. Read the clue, pick the animal that matches, and
+                        choose the correct answer. If you get it wrong,
+                        try again and keep an eye on your score! Answer all the questions to complete the round. You can
+                        play again or choose a new set of animals to keep the adventure going!
                     </p>
                     <button id="close-instructions-btn" class="btn complete-primary-btn px-4 py-2" type="button"
                         command="close" commandfor="instructions-modal">
-                        Let’s Play
+                        Let's Play
                     </button>
                 </div>
             </div>
@@ -403,6 +411,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
