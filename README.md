@@ -103,20 +103,20 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 
 | Feature | Description | Screenshot |
 |--------|-------------|------------|
-| Theme Selection | Players choose between Land, Sea, and Air animal sets. Selecting a theme loads the game with the correct URL fragment (e.g., `game.html#air`). | ![Theme Selection Screenshot](docs\theme-selection-ss.png) |
-| Difficulty Selection | Players choose Easy, Medium, or Hard difficulty to adjust challenge and replayability. | ![Difficulty Selection Screenshot](docs\difficulty-selection-ss.png)|
-| Animal Description Clues | Each question displays a short fact or description that hints at the correct animal. | ![Animal Description Clue Screenshot](docs\animal-description-ss.png) |
-| Answer Card Grid | A set of animal image cards is shown for each question. Players select one to make their guess. | ![Answer Card Grid Screenshot](docs\animal-card-grid-ss.png)|
-| Instant Feedback | The game immediately displays whether the chosen answer was correct or incorrect. | ![Instant Feedback Screenshot Correct](docs\instant-feedback-correct-ss.png) ![Instant Feedback Screenshot Incorrect](docs\instant-feedback-incorrect-ss.png) |
-| Score Tracking | A live score counter updates throughout the round, showing correct answers and total points. | ![Score Tracking Screenshot](docs\score-tracking-ss.png) |
-| Progress Bar | A visual progress bar shows how far through the 8‑question round the player is. |![Progress Bar Screenshot](docs\score-tracking-ss.png) |
-| Round Completion Screen | After 8 questions, players see their final score, correct count, and options to replay or choose another theme. | ![Round Completion Screen Screenshot](docs\round-complete-ss.png) |
-| Replay & Restart Options | Players can restart the current set or return to the main menu to choose a new theme. | ![Replay & Restart Options Screenshot](docs\round-complete-ss.png)|
-| Simple & Intuitive Navigation | Clear buttons, layout, and instructions ensure the game is easy to understand and quick to start. | ![Navigation Screenshot](docs\round-complete-ss.png) |
-| High‑Quality Animal Images | Bright, clear, visually appealing animal images make the game enjoyable and easy to read. | ![Animal Images Screenshot](docs\animal-card-grid-ss.png) |
-| Educational Themed Sets | Themed sets (Land, Sea, Air) support learning for children, parents, and teachers. | ![Educational Themed Sets Screenshot](docs\theme-selection-ss.png) |
-| Responsive Design | Fully responsive layout using Bootstrap and custom media queries ensures smooth play on desktop and mobile. | ![Responsive Design Screenshot](docs\responsive-ss.png)|
-| Start & Completion Screens | A simple start screen introduces the game, and a completion screen wraps up each round clearly. | ![Start Screen Screenshot](docs\welcome-ss.png) ![Completion Screen Screenshot](docs\round-complete-ss.png) |
+| Theme Selection | Players choose between Land, Sea, and Air animal sets. Selecting a theme loads the game with the correct URL fragment (e.g., `game.html#air`). | ![Theme Selection Screenshot](docs/theme-selection-ss.png) |
+| Difficulty Selection | Players choose Easy, Medium, or Hard difficulty to adjust challenge and replayability. | ![Difficulty Selection Screenshot](docs/difficulty-selection-ss.png)|
+| Animal Description Clues | Each question displays a short fact or description that hints at the correct animal. | ![Animal Description Clue Screenshot](docs/animal-description-ss.png) |
+| Answer Card Grid | A set of animal image cards is shown for each question. Players select one to make their guess. | ![Answer Card Grid Screenshot](docs/animal-card-grid-ss.png)|
+| Instant Feedback | The game immediately displays whether the chosen answer was correct or incorrect. | ![Instant Feedback Screenshot Correct](docs/instant-feedback-correct-ss.png) ![Instant Feedback Screenshot Incorrect](docs\instant-feedback-incorrect-ss.png) |
+| Score Tracking | A live score counter updates throughout the round, showing correct answers and total points. | ![Score Tracking Screenshot](docs/score-tracking-ss.png) |
+| Progress Bar | A visual progress bar shows how far through the 8‑question round the player is. |![Progress Bar Screenshot](docs/score-tracking-ss.png) |
+| Round Completion Screen | After 8 questions, players see their final score, correct count, and options to replay or choose another theme. | ![Round Completion Screen Screenshot](docs/round-complete-ss.png) |
+| Replay & Restart Options | Players can restart the current set or return to the main menu to choose a new theme. | ![Replay & Restart Options Screenshot](docs/round-complete-ss.png)|
+| Simple & Intuitive Navigation | Clear buttons, layout, and instructions ensure the game is easy to understand and quick to start. | ![Navigation Screenshot](docs/round-complete-ss.png) |
+| High‑Quality Animal Images | Bright, clear, visually appealing animal images make the game enjoyable and easy to read. | ![Animal Images Screenshot](docs/animal-card-grid-ss.png) |
+| Educational Themed Sets | Themed sets (Land, Sea, Air) support learning for children, parents, and teachers. | ![Educational Themed Sets Screenshot](docs/theme-selection-ss.png) |
+| Responsive Design | Fully responsive layout using Bootstrap and custom media queries ensures smooth play on desktop and mobile. | ![Responsive Design Screenshot](docs/responsive-ss.png)|
+| Start & Completion Screens | A simple start screen introduces the game, and a completion screen wraps up each round nice and clear. | ![Start Screen Screenshot](docs/welcome-ss.png) ![Completion Screen Screenshot](docs/round-complete-ss.png) |
 
 
 ### Planned Features
