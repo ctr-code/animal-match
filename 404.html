@@ -13,22 +13,26 @@
 </head>
 
 <body class="app-bg">
-    <nav class="navbar navbar-expand-lg app-navbar py-3">
+    <!-- How to Play -->
+    <nav class="navbar navbar-expand-lg app-navbar py-1">
         <div class="container">
             <a class="navbar-brand fw-bold app-title" href="index.html">Animal Match</a>
+
+            <label class="volume-toggle">
+                <input type="checkbox" id="volume-state">
+                <div class="volume-icon"></div>
+            </label>
+
+            <button id="how-to-play" class="btn btn-link help-link text-decoration-none" type="button" command="show-modal"
+                command-for="instructions-modal">
+                How to Play
+            </button>
+        </div>
         </div>
     </nav>
 
     <main class="container py-4 py-md-5 min-vh-100 d-flex align-items-center">
         <section class="w-100 text-center">
-            <section id="hero" class="mb-4">
-                <p class="mb-2 text-uppercase fw-bold" style="letter-spacing: 0.14em;">Error 404</p>
-                <h2 class="complete-title fw-bold mb-3">This page wandered off into the jungle</h2>
-                <p class="app-subtitle mx-auto mb-0">
-                    The animal you are looking for could not be found. Head back home and continue the quiz adventure.
-                </p>
-            </section>
-
             <div class="row justify-content-center g-4">
                 <div class="col-12 col-lg-8">
                     <div class="card complete-card text-center">
@@ -37,9 +41,11 @@
                                 <div class="trophy-circle" aria-hidden="true">🦁</div>
                             </div>
 
-                            <h2 class="complete-title fw-bold mb-3">Oops, that trail ended here.</h2>
+                            <h2 class="complete-title fw-bold mb-3">Oops, that trail ended here.<br><br>This page wandered
+                                off into the jungle!</h2>
                             <p class="complete-text mb-4">
-                                Try the home page to choose a set, or go straight back to the game board.
+                                The animal you are looking for could not be found. Head back home and continue the quiz
+                                adventure. Try the home page to choose a set, or go straight back to the game board.
                             </p>
 
                             <div class="complete-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
@@ -54,11 +60,24 @@
         </section>
     </main>
 
-    <footer class="container py-4 pb-5 text-center">
-        <p class="mb-0 text-muted-custom small">
-            Lost page? <a class="text-decoration-none" href="index.html">Return to Animal Match</a>
-        </p>
+    <!-- Footer -->
+    <footer class="navbar navbar-expand-lg jungle-footer py-3">
+        <div class="container-fluid">
+            <p class="footer-text mb-0">
+                Developed by <a href="https://github.com/ctr-code" target="_blank" rel="noopener noreferrer">Charles</a>
+                ||
+                <a href="https://github.com/CEAdlin" target="_blank" rel="noopener noreferrer">Corrine</a> ||
+                <a href="https://github.com/lion695" target="_blank" rel="noopener noreferrer">Kieron</a> ||
+                <a href="https://github.com/m-ejere" target="_blank" rel="noopener noreferrer">Mcferdy</a> ||
+                Animal Match Game © 2026.
+                <a href="index.html">Back to home</a>
+            </p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
