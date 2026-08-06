@@ -91,7 +91,7 @@ function initialiseListeners(parent) {
         () => { showSection("difficulty-selection"); });
     document.getElementById("restart-btn").addEventListener("click",
         () => { showSection("difficulty-selection"); });
-    document.querySelector("nav button").addEventListener("click", openInstructions);
+    document.querySelector("#how-to-play").addEventListener("click", openInstructions);
     document.getElementById("close-instructions-btn").addEventListener("click", closeInstructions);
 }
 
@@ -226,10 +226,9 @@ function nextQuestion() {
 
 // Handle the end of the game
 function gameOver() {
-    if (currentScore === currentQuestions.length) {
-        applause.play();
-    } else {
-        disappointment.play();
+    if (document.getElementById("volume-state").checked) {
+        let audio = currentScore >= 6 ? applause : disappointment;
+        audio.play();
     }
 
     document.getElementById("final-score").textContent = `${currentScore * 10}`;
