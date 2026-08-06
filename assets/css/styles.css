@@ -1011,6 +1011,13 @@ main.container {
 
 
 /* Media Queries */
+
+@media (min-width: 1000px) {
+  .jungle-footer {
+    height: 270px; /* increase height for wide screens */
+  }
+}
+
 @media (max-width: 991.98px) {
   #hero {
     border-radius: 1.5rem;
