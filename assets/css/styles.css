@@ -1065,7 +1065,7 @@ main.container {
 @media (max-width: 767.98px) {
 
   .game-section {
-    max-width: 100%;
+    width: 100%;
   }
   .app-navbar .container-fluid {
     gap: 0.75rem;
