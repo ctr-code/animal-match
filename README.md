@@ -4,24 +4,6 @@ A game of matching animal descriptions to pictures.
 
 ---
 
-## Table of Contents
-* [Project Setup](#project-setup)
-* [Design Brief](#design-brief)
-* [Design & Planning](#design--planning)
-  * [User Stories](#user-stories)
-  * [Wireframe](#wireframe)
-  * [Typography](#typography)
-  * [Colour Scheme](#colour-scheme)
-* [Features](#features)
-* [Copilot AI Assistance](#copilot-ai-assistance)
-* [Technologies Used](#technologies-used)
-* [Testing](#testing)
-* [Bugs](#bugs)
-* [Deployment](#deployment)
-* [Credit and Thanks](#credit-and-thanks)
-
----
-
 ## Project Setup
 
 1. In github accept your invitation to collaborate.  There should be a banner inviting you to.
@@ -111,7 +93,20 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 ---
 
 ## Copilot AI Assistance
-* [Record details of GitHub Copilot prompts, suggestions, and fixes here]
+
+### Image Optimization Script (GIMP & Copilot)
+* **Usage:** Copilot was used to write a GIMP script to convert `.png` images to `.webp`.
+* **Challenges:** 
+  * The first version failed due to a hallucinated function.
+  * The second version produced images of very low quality.
+  * The third version failed to set quality correctly because it called a function with the wrong number of parameters.
+  * Copilot failed over many attempts to point to the correct function documentation.
+* **Outcome:** The documentation was located manually to fix the script. This highlighted that AI tools can struggle with obscure technologies and APIs.
+
+### Bug Fixing & Code Implementation
+* **JS Validator & Console Error Fix:** AI was used to solve a console error appearing in the JavaScript validator regarding placeholder images in game cards. An initial suggestion to replace the source with an SVG failed, but a second suggestion to use `favicon.ico` succeeded as it was already loaded by the browser.
+* **CSS-Only Modals:** AI was used to explain and implement modal functionality without requiring extra JavaScript.
+* **Code Snippets:** AI assistance was used to check code, write standard snippets, and provide favicon file/link references.
 
 ---
 
@@ -120,8 +115,12 @@ Below are the colour palettes provided by Kieron for the Animal Match project:
 * **HTML5**
 * **CSS3**
 * **JavaScript**
-* **Bootstrap**
-* **GitHub** for repository management and hosting
+* **Bootstrap:** Used for containers and layout structure throughout the project to keep the file structure organized and easily targeted for styling/scripting.
+* **VSCode:** The primary IDE used to write and develop code for the project.
+* **GitHub:** Used for repository hosting, project management, branch workflow, and deployment.
+* **Am I Responsive? (Fireship):** Used for visual inspection of page layouts across desktop and mobile devices.
+* **W3C Markup Validation Service:** Used to test and validate HTML code.
+* **Google DevTools:** Used for debugging functionality, checking console errors, and running Lighthouse audits.
 
 ---
 
